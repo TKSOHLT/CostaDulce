@@ -1,0 +1,44 @@
+CREATE DATABASE Compras; 
+USE Compras; 
+
+/*La tabla de compras tendrá los siguientes datos */
+
+CREATE TABLE Compra(
+id_Ingreso int IDENTITY(1,1) PRIMARY KEY,
+id_Proveed int ,
+id_Usuario int , 
+cantidad int,
+fecha Date ,
+precioUnit int ,
+precioTot int 
+
+);
+
+SELECT * FROM  Compra ; 
+
+/*Código para ingresar articulos*/
+
+string query = "INSERT IN TO Compra (id_Ingreso, id_Proveed, id_Usuario, cantidad, fecha, precioUnit, precioTot) VALUES (@id_Ingreso, @id_Proveed, @id_Usuario, @cantidad, @fecha, @precioUnit, @precioTot)";
+conexion.Open(); 
+SqlCommand comando = new SqlCommand (query, conexion);
+comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
+comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
+comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
+comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
+comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
+comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
+comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
+comando.ExecuteNonQuery();
+MessageBox.Show("Se han ingresado correctamente los productos"); 
+
+-- Video de referencia: https://www.youtube.com/watch?v=19FIKWz7je8 --
+
+
+/*Código para mostrar articulos*/
+
+
+-- Video de referencia: https://www.youtube.com/watch?v=GsChbGdFkx4 --
+
+/*Código para buscar articulo POR FECHA*/
+
+SELECT fecha FROM Compra; 
