@@ -17,18 +17,21 @@ namespace CostaDulce
         public frmMenu()
         {
             InitializeComponent();
+           //this.FormBorderStyle=FormBorderStyle.
         }
 
         private void FullScreen()
         {
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            //  this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            
         }
 
         //Pantalla completa
         private void frmMenu_Load(object sender, EventArgs e)
         {
             FullScreen();
+            
         }
 
         //Diseño de los botones
@@ -42,7 +45,10 @@ namespace CostaDulce
             sender.selected = true;
 
             if (sender.selected)
-                sender.Textcolor = Color.FromArgb(98,195,140);
+            {
+                
+                sender.Textcolor = Color.FromArgb(122, 213, 1);
+            }
         }
 
         private void btnPuntoDeVenta_Click(object sender, EventArgs e)
@@ -69,10 +75,11 @@ namespace CostaDulce
         {
             //Diseño de botón
             SelectingButtons((Bunifu.Framework.UI.BunifuFlatButton)sender);
+            
             //---
             openFormsOnWrapper(new FrmCompras());
             lblHead.Text = "Compras";
-            lblHead.Dock = DockStyle.Top;
+            lblHead.Dock = DockStyle.None;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -95,6 +102,11 @@ namespace CostaDulce
             Wrapper.Tag = FormHijo;
             FormHijo.BringToFront();
             FormHijo.Show();
+        }
+
+        private void Header_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

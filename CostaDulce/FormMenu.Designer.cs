@@ -30,30 +30,58 @@ namespace CostaDulce
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            this.Sidebar = new System.Windows.Forms.Panel();
-            this.btnExit = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPuntoDeVenta = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnInventario = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCompras = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Header = new System.Windows.Forms.Panel();
             this.lblHead = new System.Windows.Forms.Label();
             this.Wrapper = new System.Windows.Forms.Panel();
-            this.Sidebar.SuspendLayout();
+            this.btnExit = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Sidebar = new System.Windows.Forms.Panel();
+            this.btnInventario = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCompras = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPuntoDeVenta = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Header.SuspendLayout();
+            this.Sidebar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Sidebar
+            // Header
             // 
-            this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
-            this.Sidebar.Controls.Add(this.btnExit);
-            this.Sidebar.Controls.Add(this.btnPuntoDeVenta);
-            this.Sidebar.Controls.Add(this.btnInventario);
-            this.Sidebar.Controls.Add(this.btnCompras);
-            this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Sidebar.Location = new System.Drawing.Point(0, 0);
-            this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(200, 801);
-            this.Sidebar.TabIndex = 0;
+            this.Header.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(178)))));
+            this.Header.Controls.Add(this.lblHead);
+            this.Header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Header.Location = new System.Drawing.Point(200, 0);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(1224, 77);
+            this.Header.TabIndex = 1;
+            this.Header.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
+            // 
+            // lblHead
+            // 
+            this.lblHead.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHead.AutoEllipsis = true;
+            this.lblHead.AutoSize = true;
+            this.lblHead.Font = new System.Drawing.Font("Product Sans", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHead.Location = new System.Drawing.Point(6, 21);
+            this.lblHead.Name = "lblHead";
+            this.lblHead.Size = new System.Drawing.Size(121, 43);
+            this.lblHead.TabIndex = 0;
+            this.lblHead.Text = "INICIO";
+            this.lblHead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Wrapper
+            // 
+            this.Wrapper.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Wrapper.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
+            this.Wrapper.Location = new System.Drawing.Point(200, 76);
+            this.Wrapper.Name = "Wrapper";
+            this.Wrapper.Size = new System.Drawing.Size(1224, 725);
+            this.Wrapper.TabIndex = 2;
+            this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
             // 
             // btnExit
             // 
@@ -64,6 +92,7 @@ namespace CostaDulce
             this.btnExit.ButtonText = "Salir";
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.DisabledColor = System.Drawing.Color.Gray;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnExit.Iconcolor = System.Drawing.Color.Transparent;
             this.btnExit.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnExit.Iconimage")));
             this.btnExit.Iconimage_right = null;
@@ -76,7 +105,7 @@ namespace CostaDulce
             this.btnExit.IconVisible = true;
             this.btnExit.IconZoom = 90D;
             this.btnExit.IsTab = false;
-            this.btnExit.Location = new System.Drawing.Point(0, 741);
+            this.btnExit.Location = new System.Drawing.Point(0, 750);
             this.btnExit.Name = "btnExit";
             this.btnExit.Normalcolor = System.Drawing.Color.Transparent;
             this.btnExit.OnHovercolor = System.Drawing.Color.Transparent;
@@ -90,40 +119,27 @@ namespace CostaDulce
             this.btnExit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnPuntoDeVenta
+            // panel1
             // 
-            this.btnPuntoDeVenta.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPuntoDeVenta.BackColor = System.Drawing.Color.Transparent;
-            this.btnPuntoDeVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPuntoDeVenta.BorderRadius = 0;
-            this.btnPuntoDeVenta.ButtonText = "Punto de Venta";
-            this.btnPuntoDeVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPuntoDeVenta.DisabledColor = System.Drawing.Color.Gray;
-            this.btnPuntoDeVenta.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPuntoDeVenta.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPuntoDeVenta.Iconimage")));
-            this.btnPuntoDeVenta.Iconimage_right = null;
-            this.btnPuntoDeVenta.Iconimage_right_Selected = null;
-            this.btnPuntoDeVenta.Iconimage_Selected = null;
-            this.btnPuntoDeVenta.IconMarginLeft = 0;
-            this.btnPuntoDeVenta.IconMarginRight = 0;
-            this.btnPuntoDeVenta.IconRightVisible = true;
-            this.btnPuntoDeVenta.IconRightZoom = 0D;
-            this.btnPuntoDeVenta.IconVisible = true;
-            this.btnPuntoDeVenta.IconZoom = 90D;
-            this.btnPuntoDeVenta.IsTab = false;
-            this.btnPuntoDeVenta.Location = new System.Drawing.Point(0, 402);
-            this.btnPuntoDeVenta.Name = "btnPuntoDeVenta";
-            this.btnPuntoDeVenta.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnPuntoDeVenta.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btnPuntoDeVenta.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPuntoDeVenta.selected = false;
-            this.btnPuntoDeVenta.Size = new System.Drawing.Size(200, 51);
-            this.btnPuntoDeVenta.TabIndex = 2;
-            this.btnPuntoDeVenta.Text = "Punto de Venta";
-            this.btnPuntoDeVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPuntoDeVenta.Textcolor = System.Drawing.Color.White;
-            this.btnPuntoDeVenta.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPuntoDeVenta.Click += new System.EventHandler(this.btnPuntoDeVenta_Click);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 77);
+            this.panel1.TabIndex = 0;
+            // 
+            // Sidebar
+            // 
+            this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(48)))), ((int)(((byte)(96)))));
+            this.Sidebar.Controls.Add(this.btnExit);
+            this.Sidebar.Controls.Add(this.btnPuntoDeVenta);
+            this.Sidebar.Controls.Add(this.btnCompras);
+            this.Sidebar.Controls.Add(this.btnInventario);
+            this.Sidebar.Controls.Add(this.panel1);
+            this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Sidebar.Location = new System.Drawing.Point(0, 0);
+            this.Sidebar.Name = "Sidebar";
+            this.Sidebar.Size = new System.Drawing.Size(200, 801);
+            this.Sidebar.TabIndex = 0;
             // 
             // btnInventario
             // 
@@ -134,6 +150,7 @@ namespace CostaDulce
             this.btnInventario.ButtonText = "Inventario";
             this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInventario.DisabledColor = System.Drawing.Color.Gray;
+            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventario.Iconcolor = System.Drawing.Color.Transparent;
             this.btnInventario.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnInventario.Iconimage")));
             this.btnInventario.Iconimage_right = null;
@@ -146,13 +163,13 @@ namespace CostaDulce
             this.btnInventario.IconVisible = true;
             this.btnInventario.IconZoom = 90D;
             this.btnInventario.IsTab = false;
-            this.btnInventario.Location = new System.Drawing.Point(0, 290);
+            this.btnInventario.Location = new System.Drawing.Point(0, 77);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Normalcolor = System.Drawing.Color.Transparent;
             this.btnInventario.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnInventario.OnHoverTextColor = System.Drawing.Color.White;
             this.btnInventario.selected = false;
-            this.btnInventario.Size = new System.Drawing.Size(200, 51);
+            this.btnInventario.Size = new System.Drawing.Size(200, 99);
             this.btnInventario.TabIndex = 1;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,6 +186,7 @@ namespace CostaDulce
             this.btnCompras.ButtonText = "Compras";
             this.btnCompras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCompras.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCompras.Iconcolor = System.Drawing.Color.Transparent;
             this.btnCompras.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCompras.Iconimage")));
             this.btnCompras.Iconimage_right = null;
@@ -181,14 +199,14 @@ namespace CostaDulce
             this.btnCompras.IconVisible = true;
             this.btnCompras.IconZoom = 90D;
             this.btnCompras.IsTab = false;
-            this.btnCompras.Location = new System.Drawing.Point(0, 185);
+            this.btnCompras.Location = new System.Drawing.Point(0, 176);
             this.btnCompras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Normalcolor = System.Drawing.Color.Transparent;
             this.btnCompras.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnCompras.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCompras.selected = false;
-            this.btnCompras.Size = new System.Drawing.Size(200, 51);
+            this.btnCompras.Size = new System.Drawing.Size(200, 99);
             this.btnCompras.TabIndex = 0;
             this.btnCompras.Text = "Compras";
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,62 +214,76 @@ namespace CostaDulce
             this.btnCompras.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
-            // Header
+            // btnPuntoDeVenta
             // 
-            this.Header.Controls.Add(this.lblHead);
-            this.Header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Header.Location = new System.Drawing.Point(200, 0);
-            this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1224, 60);
-            this.Header.TabIndex = 1;
-            // 
-            // lblHead
-            // 
-            this.lblHead.AutoSize = true;
-            this.lblHead.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHead.Location = new System.Drawing.Point(6, 9);
-            this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(0, 51);
-            this.lblHead.TabIndex = 0;
-            this.lblHead.Text = "";
-            // 
-            // Wrapper
-            // 
-            this.Wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Wrapper.Location = new System.Drawing.Point(200, 60);
-            this.Wrapper.Name = "Wrapper";
-            this.Wrapper.Size = new System.Drawing.Size(1224, 741);
-            this.Wrapper.TabIndex = 2;
+            this.btnPuntoDeVenta.Activecolor = System.Drawing.Color.Transparent;
+            this.btnPuntoDeVenta.BackColor = System.Drawing.Color.Transparent;
+            this.btnPuntoDeVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPuntoDeVenta.BorderRadius = 0;
+            this.btnPuntoDeVenta.ButtonText = "Punto de Venta";
+            this.btnPuntoDeVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPuntoDeVenta.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPuntoDeVenta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPuntoDeVenta.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPuntoDeVenta.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPuntoDeVenta.Iconimage")));
+            this.btnPuntoDeVenta.Iconimage_right = null;
+            this.btnPuntoDeVenta.Iconimage_right_Selected = null;
+            this.btnPuntoDeVenta.Iconimage_Selected = null;
+            this.btnPuntoDeVenta.IconMarginLeft = 0;
+            this.btnPuntoDeVenta.IconMarginRight = 0;
+            this.btnPuntoDeVenta.IconRightVisible = true;
+            this.btnPuntoDeVenta.IconRightZoom = 0D;
+            this.btnPuntoDeVenta.IconVisible = true;
+            this.btnPuntoDeVenta.IconZoom = 90D;
+            this.btnPuntoDeVenta.IsTab = false;
+            this.btnPuntoDeVenta.Location = new System.Drawing.Point(0, 275);
+            this.btnPuntoDeVenta.Name = "btnPuntoDeVenta";
+            this.btnPuntoDeVenta.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnPuntoDeVenta.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnPuntoDeVenta.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPuntoDeVenta.selected = false;
+            this.btnPuntoDeVenta.Size = new System.Drawing.Size(200, 99);
+            this.btnPuntoDeVenta.TabIndex = 2;
+            this.btnPuntoDeVenta.Text = "Punto de Venta";
+            this.btnPuntoDeVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPuntoDeVenta.Textcolor = System.Drawing.Color.White;
+            this.btnPuntoDeVenta.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPuntoDeVenta.Click += new System.EventHandler(this.btnPuntoDeVenta_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(255)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(1424, 801);
             this.Controls.Add(this.Wrapper);
             this.Controls.Add(this.Header);
             this.Controls.Add(this.Sidebar);
+            this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimumSize = new System.Drawing.Size(1440, 840);
             this.Name = "frmMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmMenu_Load);
-            this.Sidebar.ResumeLayout(false);
             this.Header.ResumeLayout(false);
             this.Header.PerformLayout();
+            this.Sidebar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel Sidebar;
         private System.Windows.Forms.Panel Header;
         private System.Windows.Forms.Panel Wrapper;
-        private Bunifu.Framework.UI.BunifuFlatButton btnExit;
-        private Bunifu.Framework.UI.BunifuFlatButton btnPuntoDeVenta;
-        private Bunifu.Framework.UI.BunifuFlatButton btnInventario;
-        private Bunifu.Framework.UI.BunifuFlatButton btnCompras;
         private System.Windows.Forms.Label lblHead;
+        private Bunifu.Framework.UI.BunifuFlatButton btnExit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Sidebar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPuntoDeVenta;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCompras;
+        private Bunifu.Framework.UI.BunifuFlatButton btnInventario;
     }
 }
