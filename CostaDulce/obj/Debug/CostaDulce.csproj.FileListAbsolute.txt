@@ -14,3 +14,18 @@ C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDu
 C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmCompras.resources
 C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventario.resources
 C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmPuntoDeVenta.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\CostaDulce.exe.config
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\CostaDulce.exe
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\CostaDulce.pdb
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.AssemblyReference.cache
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.frmMenu.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.frmLogin.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmCompras.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventario.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmPuntoDeVenta.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.Properties.Resources.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.GenerateResource.cache
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.CoreCompileInputs.cache
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.CopyComplete
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.exe
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.pdb
