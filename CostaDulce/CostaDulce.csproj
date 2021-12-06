@@ -63,17 +63,35 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCompras.cs">
+    <Compile Include="FrmInventarioProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCompras.Designer.cs">
-      <DependentUpon>FrmCompras.cs</DependentUpon>
+    <Compile Include="FrmInventarioProducto.Designer.cs">
+      <DependentUpon>FrmInventarioProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventarioProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioProveedor.Designer.cs">
+      <DependentUpon>FrmInventarioProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventarioEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioEmpleado.Designer.cs">
+      <DependentUpon>FrmInventarioEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInventario.Designer.cs">
       <DependentUpon>FrmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompras.Designer.cs">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPuntoDeVenta.cs">
       <SubType>Form</SubType>
@@ -89,11 +107,20 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCompras.resx">
-      <DependentUpon>FrmCompras.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInventarioProducto.resx">
+      <DependentUpon>FrmInventarioProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioProveedor.resx">
+      <DependentUpon>FrmInventarioProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioEmpleado.resx">
+      <DependentUpon>FrmInventarioEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompras.resx">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPuntoDeVenta.resx">
       <DependentUpon>FrmPuntoDeVenta.cs</DependentUpon>

@@ -29,3 +29,6 @@ E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.CoreCompileInputs.c
 E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.CopyComplete
 E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.exe
 E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.pdb
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventarioProveedor.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventarioEmpleado.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventarioProducto.resources

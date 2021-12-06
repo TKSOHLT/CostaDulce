@@ -12,44 +12,39 @@ namespace CostaDulce
 {
     public partial class FrmInventario : Form
     {
+        private Form formActivado = null;
         public FrmInventario()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        
+        private void openFormsOnWrapper(Form FormHijo)
         {
-
+            if (formActivado != null)
+                formActivado.Close();
+            formActivado = FormHijo;
+            FormHijo.TopLevel = false;
+            FormHijo.Dock = DockStyle.Fill;
+            Wrapper.Controls.Add(FormHijo);
+            Wrapper.Tag = FormHijo;
+            FormHijo.BringToFront();
+            FormHijo.Show();
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
+        private void InventarioMenu_Click(object sender, EventArgs e)
         {
-
+            openFormsOnWrapper(new FrmInventarioProducto());
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void EmpleadosMenu_Click(object sender, EventArgs e)
         {
-
+            openFormsOnWrapper(new FrmInventarioEmpleado());
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ProveedorMenu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Agregar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
+            openFormsOnWrapper(new FrmInventarioProveedor());
         }
     }
 }
