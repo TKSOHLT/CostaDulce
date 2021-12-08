@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,17 +78,35 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCompras.cs">
+    <Compile Include="FrmInventarioProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCompras.Designer.cs">
-      <DependentUpon>FrmCompras.cs</DependentUpon>
+    <Compile Include="FrmInventarioProducto.Designer.cs">
+      <DependentUpon>FrmInventarioProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventarioProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioProveedor.Designer.cs">
+      <DependentUpon>FrmInventarioProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventarioEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioEmpleado.Designer.cs">
+      <DependentUpon>FrmInventarioEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInventario.Designer.cs">
       <DependentUpon>FrmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompras.Designer.cs">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPuntoDeVenta.cs">
       <SubType>Form</SubType>
@@ -89,11 +122,20 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCompras.resx">
-      <DependentUpon>FrmCompras.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInventarioProducto.resx">
+      <DependentUpon>FrmInventarioProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioProveedor.resx">
+      <DependentUpon>FrmInventarioProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioEmpleado.resx">
+      <DependentUpon>FrmInventarioEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompras.resx">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPuntoDeVenta.resx">
       <DependentUpon>FrmPuntoDeVenta.cs</DependentUpon>
@@ -119,6 +161,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.csproj">
+      <Project>{a178ddd5-4e51-4a3e-8d6b-678b6a68f0e6}</Project>
+      <Name>Capa_Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
+      <Project>{5be41c7f-03d5-4268-9479-52c846b05fef}</Project>
+      <Name>Capa_Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

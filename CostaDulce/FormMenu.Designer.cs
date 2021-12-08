@@ -52,7 +52,7 @@ namespace CostaDulce
             this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.Sidebar.Location = new System.Drawing.Point(0, 0);
             this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(200, 801);
+            this.Sidebar.Size = new System.Drawing.Size(200, 749);
             this.Sidebar.TabIndex = 0;
             // 
             // btnExit
@@ -202,32 +202,31 @@ namespace CostaDulce
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(200, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1224, 60);
+            this.Header.Size = new System.Drawing.Size(1170, 60);
             this.Header.TabIndex = 1;
             // 
             // lblHead
             // 
             this.lblHead.AutoSize = true;
-            this.lblHead.Font = new System.Drawing.Font("Poppins", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHead.Location = new System.Drawing.Point(6, 9);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(0, 51);
+            this.lblHead.Size = new System.Drawing.Size(0, 33);
             this.lblHead.TabIndex = 0;
-            this.lblHead.Text = "";
             // 
             // Wrapper
             // 
             this.Wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Wrapper.Location = new System.Drawing.Point(200, 60);
             this.Wrapper.Name = "Wrapper";
-            this.Wrapper.Size = new System.Drawing.Size(1224, 741);
+            this.Wrapper.Size = new System.Drawing.Size(1170, 689);
             this.Wrapper.TabIndex = 2;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1424, 801);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.Wrapper);
             this.Controls.Add(this.Header);
             this.Controls.Add(this.Sidebar);
