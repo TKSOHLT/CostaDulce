@@ -21,7 +21,6 @@ C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.Asse
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.frmMenu.resources
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.frmLogin.resources
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmCompras.resources
-C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventario.resources
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmPuntoDeVenta.resources
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.Properties.Resources.resources
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.GenerateResource.cache
@@ -29,3 +28,4 @@ C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.Core
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.CopyComplete
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.exe
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.pdb
+C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.OlvideContraseña.resources

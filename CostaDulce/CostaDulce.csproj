@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +52,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CorreoElectronico\CorreoSoporteSistema.cs" />
+    <Compile Include="CorreoElectronico\MasterMailServices.cs" />
+    <Compile Include="OlvideContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OlvideContraseña.Designer.cs">
+      <DependentUpon>OlvideContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServer\ConnectionToSql.cs" />
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +87,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServer\UserData.cs" />
+    <Compile Include="UserModel.cs" />
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +101,9 @@
     <EmbeddedResource Include="FrmPuntoDeVenta.resx">
       <DependentUpon>FrmPuntoDeVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OlvideContraseña.resx">
+      <DependentUpon>OlvideContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -97,7 +112,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App1.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-2-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
