@@ -1,0 +1,11 @@
+E:\OLGAAAA\CostaDulce\Capa_Negocio\bin\Debug\Capa_Negocio.dll
+E:\OLGAAAA\CostaDulce\Capa_Negocio\bin\Debug\Capa_Negocio.pdb
+E:\OLGAAAA\CostaDulce\Capa_Negocio\bin\Debug\Capa_Datos.dll
+E:\OLGAAAA\CostaDulce\Capa_Negocio\bin\Debug\Capa_Entidad.dll
+E:\OLGAAAA\CostaDulce\Capa_Negocio\bin\Debug\Capa_Datos.pdb
+E:\OLGAAAA\CostaDulce\Capa_Negocio\bin\Debug\Capa_Entidad.pdb
+E:\OLGAAAA\CostaDulce\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.AssemblyReference.cache
+E:\OLGAAAA\CostaDulce\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CoreCompileInputs.cache
+E:\OLGAAAA\CostaDulce\Capa_Negocio\obj\Debug\Capa_Negocio.csproj.CopyComplete
+E:\OLGAAAA\CostaDulce\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+E:\OLGAAAA\CostaDulce\Capa_Negocio\obj\Debug\Capa_Negocio.pdb

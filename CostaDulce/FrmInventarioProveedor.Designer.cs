@@ -29,317 +29,328 @@ namespace CostaDulce
         /// </summary>
         private void InitializeComponent()
         {
-            this.Wrapper = new System.Windows.Forms.Panel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.ProductosBasedeDatos = new System.Windows.Forms.DataGridView();
-            this.Wrapper.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.ProveedorBasedeDatos = new System.Windows.Forms.DataGridView();
+            this.Wrapper = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Buscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtID_Producto = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtApellidoP_P = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtApellidoM_P = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.Agregar = new System.Windows.Forms.Button();
+            this.Modificar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductosBasedeDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedorBasedeDatos)).BeginInit();
+            this.Wrapper.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupBox5.Controls.Add(this.ProveedorBasedeDatos);
+            this.groupBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(36, 307);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1051, 273);
+            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "-PROVEEDOR-";
+            // 
+            // ProveedorBasedeDatos
+            // 
+            this.ProveedorBasedeDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProveedorBasedeDatos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.ProveedorBasedeDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProveedorBasedeDatos.Location = new System.Drawing.Point(6, 37);
+            this.ProveedorBasedeDatos.Name = "ProveedorBasedeDatos";
+            this.ProveedorBasedeDatos.Size = new System.Drawing.Size(1039, 230);
+            this.ProveedorBasedeDatos.TabIndex = 0;
+            this.ProveedorBasedeDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProveedorBasedeDatos_CellContentClick);
             // 
             // Wrapper
             // 
-            this.Wrapper.Controls.Add(this.groupBox4);
-            this.Wrapper.Controls.Add(this.groupBox1);
-            this.Wrapper.Controls.Add(this.groupBox2);
+            this.Wrapper.Controls.Add(this.groupBox3);
+            this.Wrapper.Controls.Add(this.groupBox6);
+            this.Wrapper.Controls.Add(this.groupBox7);
             this.Wrapper.Controls.Add(this.groupBox5);
             this.Wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Wrapper.Location = new System.Drawing.Point(0, 0);
             this.Wrapper.Name = "Wrapper";
             this.Wrapper.Size = new System.Drawing.Size(1224, 741);
             this.Wrapper.TabIndex = 3;
+            this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.Wrapper_Paint);
             // 
-            // groupBox4
+            // groupBox3
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(44, 576);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(853, 153);
-            this.groupBox4.TabIndex = 11;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "-BUSQUEDA-";
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.Controls.Add(this.Buscar);
+            this.groupBox3.Controls.Add(this.txtBuscar);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(36, 209);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(853, 78);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "-BUSQUEDA-";
             // 
-            // button1
+            // Buscar
             // 
-            this.button1.Location = new System.Drawing.Point(714, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Buscar.Location = new System.Drawing.Point(629, 24);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(133, 42);
+            this.Buscar.TabIndex = 0;
+            this.Buscar.Text = "Buscar";
+            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
-            // textBox7
+            // txtBuscar
             // 
-            this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox7.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox7.Location = new System.Drawing.Point(427, 75);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(257, 22);
-            this.textBox7.TabIndex = 8;
+            this.txtBuscar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtBuscar.Location = new System.Drawing.Point(173, 34);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(367, 22);
+            this.txtBuscar.TabIndex = 8;
             // 
-            // comboBox1
+            // label9
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(141, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 30);
-            this.comboBox1.TabIndex = 7;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(41, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 22);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Nombre:";
             // 
-            // label8
+            // groupBox6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(338, 75);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 22);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Nombre:";
+            this.groupBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox6.Controls.Add(this.txtID_Producto);
+            this.groupBox6.Controls.Add(this.label1);
+            this.groupBox6.Controls.Add(this.txtApellidoP_P);
+            this.groupBox6.Controls.Add(this.txtNombre);
+            this.groupBox6.Controls.Add(this.txtTelefono);
+            this.groupBox6.Controls.Add(this.txtDireccion);
+            this.groupBox6.Controls.Add(this.txtApellidoM_P);
+            this.groupBox6.Controls.Add(this.txtID);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.label12);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Controls.Add(this.label16);
+            this.groupBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(36, 33);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(853, 170);
+            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "-DATOS-";
             // 
-            // label7
+            // txtID_Producto
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 75);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 22);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "ID Producto:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(44, 400);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(853, 153);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "-DATOS-";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox6.Location = new System.Drawing.Point(171, 91);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(70, 22);
-            this.textBox6.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox5.Location = new System.Drawing.Point(342, 91);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(70, 22);
-            this.textBox5.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox4.Location = new System.Drawing.Point(670, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 22);
-            this.textBox4.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox3.Location = new System.Drawing.Point(670, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(70, 22);
-            this.textBox3.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Location = new System.Drawing.Point(342, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 22);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(141, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(246, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 22);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Nombre:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(498, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 22);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Precio de compra:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 22);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Precio de venta:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(498, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 22);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tipo de Producto: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(246, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cantidad:";
+            this.txtID_Producto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtID_Producto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtID_Producto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID_Producto.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtID_Producto.Location = new System.Drawing.Point(476, 38);
+            this.txtID_Producto.Name = "txtID_Producto";
+            this.txtID_Producto.Size = new System.Drawing.Size(58, 19);
+            this.txtID_Producto.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 44);
+            this.label1.Location = new System.Drawing.Point(364, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 22);
-            this.label1.TabIndex = 0;
+            this.label1.Size = new System.Drawing.Size(106, 19);
+            this.label1.TabIndex = 12;
             this.label1.Text = "ID Producto:";
             // 
-            // groupBox2
+            // txtApellidoP_P
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(918, 400);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(177, 368);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "-ACCIONES-";
+            this.txtApellidoP_P.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtApellidoP_P.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellidoP_P.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtApellidoP_P.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtApellidoP_P.Location = new System.Drawing.Point(159, 104);
+            this.txtApellidoP_P.Name = "txtApellidoP_P";
+            this.txtApellidoP_P.Size = new System.Drawing.Size(155, 19);
+            this.txtApellidoP_P.TabIndex = 11;
             // 
-            // button5
+            // txtNombre
             // 
-            this.button5.Location = new System.Drawing.Point(22, 71);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(133, 42);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Agregar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.txtNombre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtNombre.Location = new System.Drawing.Point(159, 70);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(155, 19);
+            this.txtNombre.TabIndex = 10;
             // 
-            // button4
+            // txtTelefono
             // 
-            this.button4.Location = new System.Drawing.Point(22, 156);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 42);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Modificar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.txtTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTelefono.Location = new System.Drawing.Point(476, 101);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(153, 19);
+            this.txtTelefono.TabIndex = 9;
             // 
-            // button2
+            // txtDireccion
             // 
-            this.button2.Location = new System.Drawing.Point(22, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 42);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtDireccion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDireccion.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtDireccion.Location = new System.Drawing.Point(476, 70);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(153, 19);
+            this.txtDireccion.TabIndex = 8;
             // 
-            // groupBox5
+            // txtApellidoM_P
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.groupBox5.Controls.Add(this.ProductosBasedeDatos);
-            this.groupBox5.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(44, 12);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1051, 368);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "-PROVEEDOR-";
+            this.txtApellidoM_P.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtApellidoM_P.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellidoM_P.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtApellidoM_P.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtApellidoM_P.Location = new System.Drawing.Point(159, 133);
+            this.txtApellidoM_P.Name = "txtApellidoM_P";
+            this.txtApellidoM_P.Size = new System.Drawing.Size(155, 19);
+            this.txtApellidoM_P.TabIndex = 7;
             // 
-            // ProductosBasedeDatos
+            // txtID
             // 
-            this.ProductosBasedeDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductosBasedeDatos.Location = new System.Drawing.Point(6, 37);
-            this.ProductosBasedeDatos.Name = "ProductosBasedeDatos";
-            this.ProductosBasedeDatos.Size = new System.Drawing.Size(1039, 325);
-            this.ProductosBasedeDatos.TabIndex = 0;
+            this.txtID.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtID.Location = new System.Drawing.Point(159, 38);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(58, 19);
+            this.txtID.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 70);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 19);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Nombre:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(18, 133);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(143, 19);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Apellido Materno:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(16, 101);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(141, 19);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Apellido Paterno:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(364, 70);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(92, 19);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Direccion: ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(364, 101);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(81, 19);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Telefono:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(18, 38);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(31, 19);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "ID:";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox7.Controls.Add(this.Agregar);
+            this.groupBox7.Controls.Add(this.Modificar);
+            this.groupBox7.Controls.Add(this.Eliminar);
+            this.groupBox7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(910, 33);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(177, 187);
+            this.groupBox7.TabIndex = 12;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "-ACCIONES-";
+            // 
+            // Agregar
+            // 
+            this.Agregar.Location = new System.Drawing.Point(22, 34);
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Size = new System.Drawing.Size(133, 42);
+            this.Agregar.TabIndex = 4;
+            this.Agregar.Text = "Agregar";
+            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
+            // 
+            // Modificar
+            // 
+            this.Modificar.Location = new System.Drawing.Point(22, 81);
+            this.Modificar.Name = "Modificar";
+            this.Modificar.Size = new System.Drawing.Size(133, 42);
+            this.Modificar.TabIndex = 3;
+            this.Modificar.Text = "Modificar";
+            this.Modificar.UseVisualStyleBackColor = true;
+            this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Location = new System.Drawing.Point(22, 129);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(133, 42);
+            this.Eliminar.TabIndex = 1;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // FrmInventarioProveedor
             // 
@@ -351,44 +362,45 @@ namespace CostaDulce
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmInventarioProveedor";
             this.Text = "FrmCompras";
-            this.Wrapper.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ProductosBasedeDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedorBasedeDatos)).EndInit();
+            this.Wrapper.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel Wrapper;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView ProductosBasedeDatos;
+        private System.Windows.Forms.DataGridView ProveedorBasedeDatos;
+        private System.Windows.Forms.Panel Wrapper;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button Buscar;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txtApellidoP_P;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtApellidoM_P;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button Agregar;
+        private System.Windows.Forms.Button Modificar;
+        private System.Windows.Forms.Button Eliminar;
+        private System.Windows.Forms.TextBox txtID_Producto;
+        private System.Windows.Forms.Label label1;
     }
 }

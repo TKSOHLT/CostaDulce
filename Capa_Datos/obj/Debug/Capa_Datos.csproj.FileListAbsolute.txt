@@ -1,0 +1,9 @@
+E:\OLGAAAA\CostaDulce\Capa_Datos\bin\Debug\Capa_Datos.dll
+E:\OLGAAAA\CostaDulce\Capa_Datos\bin\Debug\Capa_Datos.pdb
+E:\OLGAAAA\CostaDulce\Capa_Datos\bin\Debug\Capa_Entidad.dll
+E:\OLGAAAA\CostaDulce\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.csproj.AssemblyReference.cache
+E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.csproj.CopyComplete
+E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.dll
+E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.pdb

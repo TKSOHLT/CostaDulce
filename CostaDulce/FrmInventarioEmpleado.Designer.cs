@@ -32,17 +32,19 @@ namespace CostaDulce
             this.Wrapper = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTelefono_E = new System.Windows.Forms.TextBox();
+            this.txtDireccion_E = new System.Windows.Forms.TextBox();
+            this.txtSalario_E = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtApellidoM_E = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtApellidoP_E = new System.Windows.Forms.TextBox();
+            this.txtEdad_E = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtID_Empleado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,17 +52,17 @@ namespace CostaDulce
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Agregar = new System.Windows.Forms.Button();
+            this.Modificar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ProductosBasedeDatos = new System.Windows.Forms.DataGridView();
+            this.EmpledoBasedeDatos = new System.Windows.Forms.DataGridView();
             this.Wrapper.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductosBasedeDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpledoBasedeDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // Wrapper
@@ -74,272 +76,305 @@ namespace CostaDulce
             this.Wrapper.Name = "Wrapper";
             this.Wrapper.Size = new System.Drawing.Size(1224, 741);
             this.Wrapper.TabIndex = 3;
+            this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.Wrapper_Paint);
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.txtBuscar);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(39, 576);
+            this.groupBox4.Location = new System.Drawing.Point(36, 209);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(853, 153);
+            this.groupBox4.Size = new System.Drawing.Size(853, 79);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "-BUSQUEDA-";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(714, 65);
+            this.button1.Location = new System.Drawing.Point(628, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 42);
             this.button1.TabIndex = 0;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox7
+            // txtBuscar
             // 
-            this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox7.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox7.Location = new System.Drawing.Point(427, 75);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(257, 22);
-            this.textBox7.TabIndex = 8;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(141, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(120, 30);
-            this.comboBox1.TabIndex = 7;
+            this.txtBuscar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtBuscar.Location = new System.Drawing.Point(107, 38);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(423, 22);
+            this.txtBuscar.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(338, 75);
+            this.label8.Location = new System.Drawing.Point(18, 38);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 22);
             this.label8.TabIndex = 6;
             this.label8.Text = "Nombre:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 75);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 22);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "ID Producto:";
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtTelefono_E);
+            this.groupBox3.Controls.Add(this.txtDireccion_E);
+            this.groupBox3.Controls.Add(this.txtSalario_E);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.txtApellidoM_E);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.txtApellidoP_E);
+            this.groupBox3.Controls.Add(this.txtEdad_E);
+            this.groupBox3.Controls.Add(this.txtNombre);
+            this.groupBox3.Controls.Add(this.txtID_Empleado);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(39, 400);
+            this.groupBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(36, 33);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(853, 153);
+            this.groupBox3.Size = new System.Drawing.Size(853, 170);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "-DATOS-";
             // 
-            // textBox6
+            // txtTelefono_E
             // 
-            this.textBox6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox6.Location = new System.Drawing.Point(171, 91);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(70, 22);
-            this.textBox6.TabIndex = 11;
+            this.txtTelefono_E.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTelefono_E.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono_E.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelefono_E.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTelefono_E.Location = new System.Drawing.Point(443, 131);
+            this.txtTelefono_E.Name = "txtTelefono_E";
+            this.txtTelefono_E.Size = new System.Drawing.Size(190, 19);
+            this.txtTelefono_E.TabIndex = 17;
             // 
-            // textBox5
+            // txtDireccion_E
             // 
-            this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox5.Location = new System.Drawing.Point(342, 91);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(70, 22);
-            this.textBox5.TabIndex = 10;
+            this.txtDireccion_E.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDireccion_E.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDireccion_E.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDireccion_E.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtDireccion_E.Location = new System.Drawing.Point(443, 101);
+            this.txtDireccion_E.Name = "txtDireccion_E";
+            this.txtDireccion_E.Size = new System.Drawing.Size(190, 19);
+            this.txtDireccion_E.TabIndex = 16;
             // 
-            // textBox4
+            // txtSalario_E
             // 
-            this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox4.Location = new System.Drawing.Point(670, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 22);
-            this.textBox4.TabIndex = 9;
+            this.txtSalario_E.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSalario_E.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSalario_E.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSalario_E.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtSalario_E.Location = new System.Drawing.Point(443, 69);
+            this.txtSalario_E.Name = "txtSalario_E";
+            this.txtSalario_E.Size = new System.Drawing.Size(70, 19);
+            this.txtSalario_E.TabIndex = 15;
             // 
-            // textBox3
+            // label10
             // 
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox3.Location = new System.Drawing.Point(670, 44);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(70, 22);
-            this.textBox3.TabIndex = 8;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(356, 44);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 19);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Edad:";
             // 
-            // textBox2
+            // txtApellidoM_E
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Location = new System.Drawing.Point(342, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 22);
-            this.textBox2.TabIndex = 7;
+            this.txtApellidoM_E.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtApellidoM_E.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellidoM_E.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtApellidoM_E.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtApellidoM_E.Location = new System.Drawing.Point(161, 131);
+            this.txtApellidoM_E.Name = "txtApellidoM_E";
+            this.txtApellidoM_E.Size = new System.Drawing.Size(174, 19);
+            this.txtApellidoM_E.TabIndex = 13;
             // 
-            // textBox1
+            // label9
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(141, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 6;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 131);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(147, 19);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Apellido Materno: ";
+            // 
+            // txtApellidoP_E
+            // 
+            this.txtApellidoP_E.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtApellidoP_E.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellidoP_E.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtApellidoP_E.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtApellidoP_E.Location = new System.Drawing.Point(161, 101);
+            this.txtApellidoP_E.Name = "txtApellidoP_E";
+            this.txtApellidoP_E.Size = new System.Drawing.Size(174, 19);
+            this.txtApellidoP_E.TabIndex = 10;
+            // 
+            // txtEdad_E
+            // 
+            this.txtEdad_E.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtEdad_E.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEdad_E.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEdad_E.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtEdad_E.Location = new System.Drawing.Point(443, 41);
+            this.txtEdad_E.Name = "txtEdad_E";
+            this.txtEdad_E.Size = new System.Drawing.Size(70, 19);
+            this.txtEdad_E.TabIndex = 9;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtNombre.Location = new System.Drawing.Point(161, 69);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(174, 19);
+            this.txtNombre.TabIndex = 7;
+            // 
+            // txtID_Empleado
+            // 
+            this.txtID_Empleado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtID_Empleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtID_Empleado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID_Empleado.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtID_Empleado.Location = new System.Drawing.Point(161, 44);
+            this.txtID_Empleado.Name = "txtID_Empleado";
+            this.txtID_Empleado.Size = new System.Drawing.Size(61, 19);
+            this.txtID_Empleado.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(246, 44);
+            this.label6.Location = new System.Drawing.Point(18, 69);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 22);
+            this.label6.Size = new System.Drawing.Size(76, 19);
             this.label6.TabIndex = 5;
             this.label6.Text = "Nombre:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(498, 44);
+            this.label5.Location = new System.Drawing.Point(18, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 22);
+            this.label5.Size = new System.Drawing.Size(145, 19);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Precio de compra:";
+            this.label5.Text = "Apellido Paterno: ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 91);
+            this.label4.Location = new System.Drawing.Point(356, 69);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 22);
+            this.label4.Size = new System.Drawing.Size(68, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Precio de venta:";
+            this.label4.Text = "Salario:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(498, 91);
+            this.label3.Location = new System.Drawing.Point(356, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 22);
+            this.label3.Size = new System.Drawing.Size(81, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Tipo de Producto: ";
+            this.label3.Text = "Telefono:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(246, 91);
+            this.label2.Location = new System.Drawing.Point(356, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 22);
+            this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Cantidad:";
+            this.label2.Text = "Direccion:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 22);
+            this.label1.Size = new System.Drawing.Size(35, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ID Producto:";
+            this.label1.Text = "ID :";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.Agregar);
+            this.groupBox2.Controls.Add(this.Modificar);
+            this.groupBox2.Controls.Add(this.Eliminar);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(913, 400);
+            this.groupBox2.Location = new System.Drawing.Point(910, 33);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(177, 368);
+            this.groupBox2.Size = new System.Drawing.Size(177, 188);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "-ACCIONES-";
             // 
-            // button5
+            // Agregar
             // 
-            this.button5.Location = new System.Drawing.Point(22, 71);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(133, 42);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Agregar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Agregar.Location = new System.Drawing.Point(22, 33);
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Size = new System.Drawing.Size(133, 42);
+            this.Agregar.TabIndex = 4;
+            this.Agregar.Text = "Agregar";
+            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
-            // button4
+            // Modificar
             // 
-            this.button4.Location = new System.Drawing.Point(22, 156);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 42);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Modificar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Modificar.Location = new System.Drawing.Point(22, 81);
+            this.Modificar.Name = "Modificar";
+            this.Modificar.Size = new System.Drawing.Size(133, 42);
+            this.Modificar.TabIndex = 3;
+            this.Modificar.Text = "Modificar";
+            this.Modificar.UseVisualStyleBackColor = true;
+            this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
             // 
-            // button2
+            // Eliminar
             // 
-            this.button2.Location = new System.Drawing.Point(22, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 42);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Eliminar.Location = new System.Drawing.Point(22, 129);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(133, 42);
+            this.Eliminar.TabIndex = 1;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.ProductosBasedeDatos);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(39, 12);
+            this.groupBox1.Controls.Add(this.EmpledoBasedeDatos);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(36, 307);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1051, 368);
+            this.groupBox1.Size = new System.Drawing.Size(1051, 280);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "-EMPLEADO-";
             // 
-            // ProductosBasedeDatos
+            // EmpledoBasedeDatos
             // 
-            this.ProductosBasedeDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductosBasedeDatos.Location = new System.Drawing.Point(6, 37);
-            this.ProductosBasedeDatos.Name = "ProductosBasedeDatos";
-            this.ProductosBasedeDatos.Size = new System.Drawing.Size(1039, 325);
-            this.ProductosBasedeDatos.TabIndex = 0;
+            this.EmpledoBasedeDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EmpledoBasedeDatos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.EmpledoBasedeDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmpledoBasedeDatos.Location = new System.Drawing.Point(6, 37);
+            this.EmpledoBasedeDatos.Name = "EmpledoBasedeDatos";
+            this.EmpledoBasedeDatos.Size = new System.Drawing.Size(1039, 237);
+            this.EmpledoBasedeDatos.TabIndex = 0;
+            this.EmpledoBasedeDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmpledoBasedeDatos_CellContentClick);
             // 
             // FrmInventarioEmpleado
             // 
@@ -358,26 +393,24 @@ namespace CostaDulce
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ProductosBasedeDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpledoBasedeDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel Wrapper;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView EmpledoBasedeDatos;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtApellidoP_E;
+        private System.Windows.Forms.TextBox txtEdad_E;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtID_Empleado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -385,10 +418,14 @@ namespace CostaDulce
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView ProductosBasedeDatos;
+        private System.Windows.Forms.Button Agregar;
+        private System.Windows.Forms.Button Modificar;
+        private System.Windows.Forms.Button Eliminar;
+        private System.Windows.Forms.TextBox txtApellidoM_E;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtTelefono_E;
+        private System.Windows.Forms.TextBox txtDireccion_E;
+        private System.Windows.Forms.TextBox txtSalario_E;
+        private System.Windows.Forms.Label label10;
     }
 }

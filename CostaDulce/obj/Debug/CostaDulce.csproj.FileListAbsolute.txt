@@ -32,3 +32,9 @@ E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.pdb
 E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventarioProveedor.resources
 E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventarioEmpleado.resources
 E:\OLGAAAA\CostaDulce\CostaDulce\obj\Debug\CostaDulce.FrmInventarioProducto.resources
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\Capa_Entidad.dll
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\Capa_Negocio.dll
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\Capa_Datos.dll
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\Capa_Entidad.pdb
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\Capa_Negocio.pdb
+E:\OLGAAAA\CostaDulce\CostaDulce\bin\Debug\Capa_Datos.pdb

@@ -8,10 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Capa_Entidad;
+using Capa_Negocio;
+
 namespace CostaDulce
 {
     public partial class FrmInventario : Form
     {
+        ClassNegocio objneg = new ClassNegocio();
+
         private Form formActivado = null;
         public FrmInventario()
         {
@@ -45,6 +50,14 @@ namespace CostaDulce
         private void ProveedorMenu_Click(object sender, EventArgs e)
         {
             openFormsOnWrapper(new FrmInventarioProveedor());
+        }
+
+        private void Wrapper_Paint(object sender, PaintEventArgs e)
+        {
+
+            Empleados.DataSource = objneg.N_listar_Empleados();
+            Productos.DataSource = objneg.N_listar_Productos();
+            Proveedor.DataSource = objneg.N_listar_Proveedor();
         }
     }
 }
