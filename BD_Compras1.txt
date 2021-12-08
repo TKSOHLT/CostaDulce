@@ -4,32 +4,79 @@ USE Compras;
 /*La tabla de compras tendrá los siguientes datos */
 
 CREATE TABLE Compra(
-id_Ingreso int IDENTITY(1,1) PRIMARY KEY,
+articulo varchar(40) NOT NULL, 
+id_Ingreso int ,
 id_Proveed int ,
 id_Usuario int , 
 cantidad int,
 fecha Date ,
 precioUnit int ,
-precioTot int 
+precioTot int  
 
 );
 
 SELECT * FROM  Compra ; 
 
-/*Código para ingresar articulos*/
+/*CLASE QUE PERMITE LA CONECXÓN A LA BASE DE DATOS COMPRAS*/
 
-string query = "INSERT IN TO Compra (id_Ingreso, id_Proveed, id_Usuario, cantidad, fecha, precioUnit, precioTot) VALUES (@id_Ingreso, @id_Proveed, @id_Usuario, @cantidad, @fecha, @precioUnit, @precioTot)";
-conexion.Open(); 
-SqlCommand comando = new SqlCommand (query, conexion);
-comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
-comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
-comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
-comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
-comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
-comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
-comando.Parameters.AddWhitValue(@id_Ingreso, txtidIngreso.Text);
-comando.ExecuteNonQuery();
-MessageBox.Show("Se han ingresado correctamente los productos"); 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data; 
+
+namespace CostaDulce
+{
+    public class BdComun
+    {
+        public SqlConnection LeerCadena()
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["compras"].ConnectionString); 
+            if ( cn.State == ConnectionState.Open)
+            {
+                cn.Close();
+            }
+            else
+            {
+                cn.Close();
+            }
+            return cn;
+        }
+    }
+}
+
+/*Código para ingresar articulos
+Se debe agregar en el botón 
+*/
+
+DateTime fecha = new DateTime(2021,12,06); 
+
+            string query = "INSERT INTO Compra (articulo, id_Ingreso, id_Proveed, id_Usuario, cantidad, fecha, precioUnit, precioTot) VALUES (@articulo, @id_Ingreso, @id_Proveed, @id_Usuario, @cantidad, @fecha, @precioUnit, @precioTot)";
+            cn.LeerCadena();
+            SqlCommand comando = new SqlCommand(query, cn.LeerCadena());
+            comando.Parameters.AddWithValue("@articulo", txtidingreso.Text); 
+            comando.Parameters.AddWithValue("@id_Ingreso",txtidingreso.Text);
+            
+            comando.Parameters.AddWithValue("@id_Proveed", txtidingreso.Text);
+            comando.Parameters.AddWithValue("@id_Usuario", txtidingreso.Text);
+            comando.Parameters.AddWithValue("@cantidad", txtidingreso.Text);
+            comando.Parameters.AddWithValue("@fecha", fecha);
+            comando.Parameters.AddWithValue("@precioUnit", txtidingreso.Text);
+            comando.Parameters.AddWithValue("@precioTot", txtidingreso.Text);
+
+            try
+            {
+                cn.LeerCadena();    
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Problema con la BD");
+            }
+            MessageBox.Show("Se han ingresado correctamente los productos");
 
 -- Video de referencia: https://www.youtube.com/watch?v=19FIKWz7je8 --
 
@@ -41,4 +88,4 @@ MessageBox.Show("Se han ingresado correctamente los productos");
 
 /*Código para buscar articulo POR FECHA*/
 
-SELECT fecha FROM Compra; 
+SELECT fecha FROM Compra WHERE fecha; 
