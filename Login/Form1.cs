@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CostaDulce
+namespace Login
 {
-    public partial class FrmInventario : Form
+    public partial class Form1 : Form
     {
-        public FrmInventario()
+        public Form1()
         {
             InitializeComponent();
         }
 
+<<<<<<< HEAD:CostaDulce/FrmInventario.cs
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -51,5 +52,7 @@ namespace CostaDulce
         {
 
         }
+=======
+>>>>>>> login:Login/Form1.cs
     }
 }
