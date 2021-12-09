@@ -67,3 +67,4 @@ C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.Copy
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.exe
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.pdb
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.frmAbout.resources
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\CostaDulce\obj\Debug\CostaDulce.frmAbout.resources
