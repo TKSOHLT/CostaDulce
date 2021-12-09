@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BdComun.cs" />
     <Compile Include="Cache\UserLoginCache.cs" />
     <Compile Include="CorreoElectronico\CorreoSoporteSistema.cs" />
     <Compile Include="CorreoElectronico\MasterMailServices.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="frmDatosUsuario.Designer.cs">
       <DependentUpon>frmDatosUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="M_Compras.cs" />
     <Compile Include="OlvideContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
