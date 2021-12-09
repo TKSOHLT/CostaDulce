@@ -72,7 +72,7 @@ namespace CostaDulce
             //Diseño de botón
             SelectingButtons((Bunifu.Framework.UI.BunifuFlatButton)sender);
             //---
-           // openFormsOnWrapper(new FrmInventario());
+            openFormsOnWrapper(new FrmInventario());
             lblHead.Text = "Inventario";
             lblHead.Dock = DockStyle.Top;
 

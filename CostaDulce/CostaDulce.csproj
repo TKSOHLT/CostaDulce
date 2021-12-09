@@ -62,6 +62,30 @@
     <Compile Include="frmDatosUsuario.Designer.cs">
       <DependentUpon>frmDatosUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventario.Designer.cs">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventarioEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioEmpleado.Designer.cs">
+      <DependentUpon>FrmInventarioEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventarioProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioProducto.Designer.cs">
+      <DependentUpon>FrmInventarioProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventarioProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioProveedor.Designer.cs">
+      <DependentUpon>FrmInventarioProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="M_Compras.cs" />
     <Compile Include="OlvideContraseña.cs">
       <SubType>Form</SubType>
@@ -110,6 +134,18 @@
     <EmbeddedResource Include="frmDatosUsuario.resx">
       <DependentUpon>frmDatosUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventario.resx">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioEmpleado.resx">
+      <DependentUpon>FrmInventarioEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioProducto.resx">
+      <DependentUpon>FrmInventarioProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioProveedor.resx">
+      <DependentUpon>FrmInventarioProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPuntoDeVenta.resx">
       <DependentUpon>FrmPuntoDeVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +178,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-cancelar-2-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.csproj">
+      <Project>{A178DDD5-4E51-4A3E-8D6B-678B6A68F0E6}</Project>
+      <Name>Capa_Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.csproj">
+      <Project>{5BE41C7F-03D5-4268-9479-52C846B05FEF}</Project>
+      <Name>Capa_Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

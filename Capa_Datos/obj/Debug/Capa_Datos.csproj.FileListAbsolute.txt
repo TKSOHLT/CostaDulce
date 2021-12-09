@@ -7,3 +7,12 @@ E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.c
 E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.csproj.CopyComplete
 E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.dll
 E:\OLGAAAA\CostaDulce\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\bin\Debug\Capa_Entidad.dll
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\obj\Debug\Capa_Datos.csproj.AssemblyReference.cache
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\obj\Debug\Capa_Datos.csproj.CopyComplete
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\kimis\Documents\Escuela\Quinto semestre\Bases de datos\Proyecto\CostaDulce-main\Capa_Datos\obj\Debug\Capa_Datos.pdb

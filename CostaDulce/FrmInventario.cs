@@ -23,7 +23,7 @@ namespace CostaDulce
             InitializeComponent();
         }
 
-        
+
         private void openFormsOnWrapper(Form FormHijo)
         {
             if (formActivado != null)
