@@ -47,14 +47,23 @@ namespace CostaDulce
             btnPuntoDeVenta.Textcolor = Color.White;
             btnExit.Textcolor = Color.White;
             btnPerfil.Textcolor = Color.White;
+            btnAcerca.Textcolor = Color.White;
+            btnCompras.Normalcolor = Color.Transparent;
+            btnInventario.Normalcolor = Color.Transparent;
+            btnPuntoDeVenta.Normalcolor = Color.Transparent;
+            btnExit.Normalcolor = Color.Transparent;
+            btnPerfil.Normalcolor = Color.Transparent;
+            btnAcerca.Normalcolor = Color.Transparent;
 
             sender.selected = true;
 
             if (sender.selected)
             {
-                
-                sender.Textcolor = Color.FromArgb(122, 213, 1);
+
+                sender.Textcolor = Color.Black;
+                sender.Normalcolor = Color.FromArgb(144, 202, 249);
             }
+            
         }
 
         private void btnPuntoDeVenta_Click(object sender, EventArgs e)
@@ -64,7 +73,7 @@ namespace CostaDulce
             //---
             openFormsOnWrapper(new FrmPuntoDeVenta());
             lblHead.Text = "Punto de venta";
-            lblHead.Dock = DockStyle.Top;
+            lblHead.Dock = DockStyle.None;
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
@@ -74,7 +83,7 @@ namespace CostaDulce
             //---
             openFormsOnWrapper(new FrmInventario());
             lblHead.Text = "Inventario";
-            lblHead.Dock = DockStyle.Top;
+            lblHead.Dock = DockStyle.None;
 
         }
 
@@ -121,7 +130,7 @@ namespace CostaDulce
 
             //---
             openFormsOnWrapper(new frmDatosUsuario());
-            lblHead.Text = "Usuarios y contraseñas";
+            lblHead.Text = "Mis datos";
             lblHead.Dock = DockStyle.None;
         }
 
@@ -133,6 +142,16 @@ namespace CostaDulce
         private void lblnombreusuario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            SelectingButtons((Bunifu.Framework.UI.BunifuFlatButton)sender);
+
+            //---
+            openFormsOnWrapper(new frmAbout());
+            lblHead.Text = "Aceca de la aplicación";
+            lblHead.Dock = DockStyle.None;
         }
     }
 }

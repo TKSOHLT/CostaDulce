@@ -17,8 +17,7 @@ namespace CostaDulce
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = 
-                        "UPDATE Users SET NombreUsuario=@username, Password=@pass, Nombre=@name, Apellidos=@lastN, Correo=@mail, UserID=@usrid";
+                    command.CommandText = "UPDATE Users SET NombreUsuario=@username, Password=@pass, Nombre=@name, Apellidos=@lastN, Correo=@mail where UserID=@usrid";
                     command.Parameters.AddWithValue("@username", username); command.Parameters.AddWithValue("@pass", pass);
                     command.Parameters.AddWithValue("@name", nom); command.Parameters.AddWithValue("@lastN", ape);
                     command.Parameters.AddWithValue("@mail", mail); command.Parameters.AddWithValue("@usrid", id);
@@ -46,7 +45,9 @@ namespace CostaDulce
                     {
                         while (reader.Read())
                         {
-                            Cache.UserLoginCache.iduser = reader.GetInt32(0);
+                            Cache.UserLoginCache.UserID = reader.GetInt32(0);
+                            Cache.UserLoginCache.loginName = reader.GetString(1);
+                            Cache.UserLoginCache.password = reader.GetString(2);
                             Cache.UserLoginCache.name = reader.GetString(3);
                             Cache.UserLoginCache.lastn = reader.GetString(4);
                             Cache.UserLoginCache.mail = reader.GetString(5);

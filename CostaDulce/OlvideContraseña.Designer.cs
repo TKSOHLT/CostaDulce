@@ -29,6 +29,7 @@ namespace CostaDulce
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OlvideContraseña));
             this.btnenviar = new System.Windows.Forms.Button();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.lblenunciado = new System.Windows.Forms.Label();
@@ -117,6 +118,8 @@ namespace CostaDulce
             this.ClientSize = new System.Drawing.Size(504, 180);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(520, 219);
             this.Name = "OlvideContraseña";

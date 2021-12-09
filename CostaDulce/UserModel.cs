@@ -10,20 +10,20 @@ namespace CostaDulce
     {
         UserData userData = new UserData();
         //atributos de cada usuario en la BD
-        private int iduser;
+        private int id;
         private string loginName;
         private string pass;
-        private string Name;
-        private string LastN;
+        private string name;
+        private string lastN;
         private string mail;
 
-        public UserModel(int iduser, string loginName, string pass, string name, string lastN, string mail)
+        public UserModel(int id, string loginName, string pass, string name, string lastN, string mail)
         {
-            this.iduser = iduser;
+            this.id = id;
             this.loginName = loginName;
             this.pass = pass;
-            this.Name = name;
-            this.LastN = lastN;
+            this.name = name;
+            this.lastN = lastN;
             this.mail = mail;
         }
         public UserModel()
@@ -36,7 +36,7 @@ namespace CostaDulce
             
             try
             {
-            userData.editarPerfil(iduser,loginName,pass,Name,LastN,mail);
+            userData.editarPerfil(id,loginName,pass,name,lastN,mail);
             LoginUser(loginName, pass);
                 return "Información actualizada con exito.";
             }catch(Exception ex)

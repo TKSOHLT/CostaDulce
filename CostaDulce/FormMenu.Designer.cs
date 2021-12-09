@@ -33,18 +33,23 @@ namespace CostaDulce
             this.Header = new System.Windows.Forms.Panel();
             this.lblHead = new System.Windows.Forms.Label();
             this.Wrapper = new System.Windows.Forms.Panel();
-            this.btnExit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblgreeting = new System.Windows.Forms.Label();
+            this.lblnombreusuario = new System.Windows.Forms.Label();
             this.Sidebar = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAcerca = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPerfil = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnExit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPuntoDeVenta = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCompras = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnInventario = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPerfil = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lblnombreusuario = new System.Windows.Forms.Label();
-            this.lblgreeting = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Header.SuspendLayout();
+            this.Wrapper.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Sidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Header
@@ -81,11 +86,146 @@ namespace CostaDulce
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Wrapper.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(227)))));
+            this.Wrapper.Controls.Add(this.lblnombreusuario);
+            this.Wrapper.Controls.Add(this.lblgreeting);
+            this.Wrapper.Controls.Add(this.pictureBox1);
             this.Wrapper.Location = new System.Drawing.Point(200, 101);
             this.Wrapper.Name = "Wrapper";
             this.Wrapper.Size = new System.Drawing.Size(1224, 700);
             this.Wrapper.TabIndex = 2;
             this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 101);
+            this.panel1.TabIndex = 0;
+            // 
+            // lblgreeting
+            // 
+            this.lblgreeting.AutoSize = true;
+            this.lblgreeting.Font = new System.Drawing.Font("Product Sans", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgreeting.Location = new System.Drawing.Point(63, 59);
+            this.lblgreeting.Name = "lblgreeting";
+            this.lblgreeting.Size = new System.Drawing.Size(377, 116);
+            this.lblgreeting.TabIndex = 0;
+            this.lblgreeting.Text = "Saludos";
+            // 
+            // lblnombreusuario
+            // 
+            this.lblnombreusuario.AutoSize = true;
+            this.lblnombreusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.lblnombreusuario.Font = new System.Drawing.Font("Product Sans", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreusuario.Location = new System.Drawing.Point(70, 220);
+            this.lblnombreusuario.Name = "lblnombreusuario";
+            this.lblnombreusuario.Size = new System.Drawing.Size(362, 64);
+            this.lblnombreusuario.TabIndex = 3;
+            this.lblnombreusuario.Text = "Usuario Nuevo";
+            this.lblnombreusuario.Click += new System.EventHandler(this.lblnombreusuario_Click);
+            // 
+            // Sidebar
+            // 
+            this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(95)))), ((int)(((byte)(130)))));
+            this.Sidebar.Controls.Add(this.btnAcerca);
+            this.Sidebar.Controls.Add(this.btnPerfil);
+            this.Sidebar.Controls.Add(this.btnExit);
+            this.Sidebar.Controls.Add(this.btnPuntoDeVenta);
+            this.Sidebar.Controls.Add(this.btnCompras);
+            this.Sidebar.Controls.Add(this.btnInventario);
+            this.Sidebar.Controls.Add(this.panel1);
+            this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Sidebar.Location = new System.Drawing.Point(0, 0);
+            this.Sidebar.Name = "Sidebar";
+            this.Sidebar.Size = new System.Drawing.Size(200, 801);
+            this.Sidebar.TabIndex = 0;
+            this.Sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.Sidebar_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(655, 99);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(484, 495);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAcerca
+            // 
+            this.btnAcerca.Activecolor = System.Drawing.Color.Transparent;
+            this.btnAcerca.BackColor = System.Drawing.Color.Transparent;
+            this.btnAcerca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAcerca.BorderRadius = 0;
+            this.btnAcerca.ButtonText = "Acerca de";
+            this.btnAcerca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAcerca.DisabledColor = System.Drawing.SystemColors.Highlight;
+            this.btnAcerca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAcerca.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAcerca.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAcerca.Iconimage")));
+            this.btnAcerca.Iconimage_right = null;
+            this.btnAcerca.Iconimage_right_Selected = null;
+            this.btnAcerca.Iconimage_Selected = null;
+            this.btnAcerca.IconMarginLeft = 0;
+            this.btnAcerca.IconMarginRight = 0;
+            this.btnAcerca.IconRightVisible = true;
+            this.btnAcerca.IconRightZoom = 0D;
+            this.btnAcerca.IconVisible = true;
+            this.btnAcerca.IconZoom = 90D;
+            this.btnAcerca.IsTab = false;
+            this.btnAcerca.Location = new System.Drawing.Point(0, 497);
+            this.btnAcerca.Name = "btnAcerca";
+            this.btnAcerca.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnAcerca.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.btnAcerca.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAcerca.selected = false;
+            this.btnAcerca.Size = new System.Drawing.Size(200, 107);
+            this.btnAcerca.TabIndex = 5;
+            this.btnAcerca.Text = "Acerca de";
+            this.btnAcerca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcerca.Textcolor = System.Drawing.Color.White;
+            this.btnAcerca.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcerca.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Activecolor = System.Drawing.Color.Transparent;
+            this.btnPerfil.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.btnPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPerfil.BorderRadius = 0;
+            this.btnPerfil.ButtonText = "Mis datos";
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerfil.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPerfil.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Iconimage")));
+            this.btnPerfil.Iconimage_right = null;
+            this.btnPerfil.Iconimage_right_Selected = null;
+            this.btnPerfil.Iconimage_Selected = null;
+            this.btnPerfil.IconMarginLeft = 0;
+            this.btnPerfil.IconMarginRight = 0;
+            this.btnPerfil.IconRightVisible = true;
+            this.btnPerfil.IconRightZoom = 0D;
+            this.btnPerfil.IconVisible = true;
+            this.btnPerfil.IconZoom = 90D;
+            this.btnPerfil.IsTab = false;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 398);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnPerfil.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.btnPerfil.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnPerfil.selected = false;
+            this.btnPerfil.Size = new System.Drawing.Size(200, 99);
+            this.btnPerfil.TabIndex = 4;
+            this.btnPerfil.Text = "Mis datos";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Textcolor = System.Drawing.Color.White;
+            this.btnPerfil.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnExit
             // 
@@ -112,7 +252,7 @@ namespace CostaDulce
             this.btnExit.Location = new System.Drawing.Point(0, 750);
             this.btnExit.Name = "btnExit";
             this.btnExit.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnExit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.btnExit.OnHovercolor = System.Drawing.Color.Red;
             this.btnExit.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnExit.selected = false;
             this.btnExit.Size = new System.Drawing.Size(200, 51);
@@ -123,36 +263,10 @@ namespace CostaDulce
             this.btnExit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lblgreeting);
-            this.panel1.Controls.Add(this.lblnombreusuario);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 101);
-            this.panel1.TabIndex = 0;
-            // 
-            // Sidebar
-            // 
-            this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(95)))), ((int)(((byte)(130)))));
-            this.Sidebar.Controls.Add(this.btnPerfil);
-            this.Sidebar.Controls.Add(this.btnExit);
-            this.Sidebar.Controls.Add(this.btnPuntoDeVenta);
-            this.Sidebar.Controls.Add(this.btnCompras);
-            this.Sidebar.Controls.Add(this.btnInventario);
-            this.Sidebar.Controls.Add(this.panel1);
-            this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Sidebar.Location = new System.Drawing.Point(0, 0);
-            this.Sidebar.Name = "Sidebar";
-            this.Sidebar.Size = new System.Drawing.Size(200, 801);
-            this.Sidebar.TabIndex = 0;
-            this.Sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.Sidebar_Paint);
-            // 
             // btnPuntoDeVenta
             // 
             this.btnPuntoDeVenta.Activecolor = System.Drawing.Color.Transparent;
+            this.btnPuntoDeVenta.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.btnPuntoDeVenta.BackColor = System.Drawing.Color.Transparent;
             this.btnPuntoDeVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPuntoDeVenta.BorderRadius = 0;
@@ -189,6 +303,7 @@ namespace CostaDulce
             // btnCompras
             // 
             this.btnCompras.Activecolor = System.Drawing.Color.Transparent;
+            this.btnCompras.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.btnCompras.BackColor = System.Drawing.Color.Transparent;
             this.btnCompras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCompras.BorderRadius = 0;
@@ -226,6 +341,7 @@ namespace CostaDulce
             // btnInventario
             // 
             this.btnInventario.Activecolor = System.Drawing.Color.Transparent;
+            this.btnInventario.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.btnInventario.BackColor = System.Drawing.Color.Transparent;
             this.btnInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnInventario.BorderRadius = 0;
@@ -259,62 +375,15 @@ namespace CostaDulce
             this.btnInventario.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
-            // btnPerfil
+            // label1
             // 
-            this.btnPerfil.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPerfil.BorderRadius = 0;
-            this.btnPerfil.ButtonText = "Mis datos";
-            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPerfil.DisabledColor = System.Drawing.Color.Gray;
-            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPerfil.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPerfil.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Iconimage")));
-            this.btnPerfil.Iconimage_right = null;
-            this.btnPerfil.Iconimage_right_Selected = null;
-            this.btnPerfil.Iconimage_Selected = null;
-            this.btnPerfil.IconMarginLeft = 0;
-            this.btnPerfil.IconMarginRight = 0;
-            this.btnPerfil.IconRightVisible = true;
-            this.btnPerfil.IconRightZoom = 0D;
-            this.btnPerfil.IconVisible = true;
-            this.btnPerfil.IconZoom = 90D;
-            this.btnPerfil.IsTab = false;
-            this.btnPerfil.Location = new System.Drawing.Point(0, 398);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnPerfil.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
-            this.btnPerfil.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnPerfil.selected = false;
-            this.btnPerfil.Size = new System.Drawing.Size(200, 99);
-            this.btnPerfil.TabIndex = 4;
-            this.btnPerfil.Text = "Mis datos";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Textcolor = System.Drawing.Color.White;
-            this.btnPerfil.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // lblnombreusuario
-            // 
-            this.lblnombreusuario.AutoSize = true;
-            this.lblnombreusuario.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombreusuario.Location = new System.Drawing.Point(12, 44);
-            this.lblnombreusuario.Name = "lblnombreusuario";
-            this.lblnombreusuario.Size = new System.Drawing.Size(47, 19);
-            this.lblnombreusuario.TabIndex = 3;
-            this.lblnombreusuario.Text = "label1";
-            this.lblnombreusuario.Click += new System.EventHandler(this.lblnombreusuario_Click);
-            // 
-            // lblgreeting
-            // 
-            this.lblgreeting.AutoSize = true;
-            this.lblgreeting.Font = new System.Drawing.Font("Product Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgreeting.Location = new System.Drawing.Point(66, 9);
-            this.lblgreeting.Name = "lblgreeting";
-            this.lblgreeting.Size = new System.Drawing.Size(59, 18);
-            this.lblgreeting.TabIndex = 0;
-            this.lblgreeting.Text = "Saludos";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Product Sans", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(49, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 35);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "MENÚ";
             // 
             // frmMenu
             // 
@@ -328,17 +397,21 @@ namespace CostaDulce
             this.Controls.Add(this.Header);
             this.Controls.Add(this.Sidebar);
             this.ForeColor = System.Drawing.Color.Transparent;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1440, 840);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "CostaDulce 0.4";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.Header.ResumeLayout(false);
             this.Header.PerformLayout();
+            this.Wrapper.ResumeLayout(false);
+            this.Wrapper.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Sidebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,5 +429,8 @@ namespace CostaDulce
         private Bunifu.Framework.UI.BunifuFlatButton btnPerfil;
         private System.Windows.Forms.Label lblgreeting;
         private System.Windows.Forms.Label lblnombreusuario;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAcerca;
+        private System.Windows.Forms.Label label1;
     }
 }
