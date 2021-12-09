@@ -30,10 +30,15 @@ namespace CostaDulce
         //Pantalla completa
         private void frmMenu_Load(object sender, EventArgs e)
         {
+            
             FullScreen();
+            LoadDataUser();
             
         }
-
+        private void LoadDataUser()
+        {
+            lblnombreusuario.Text = Cache.UserLoginCache.name+" "+Cache.UserLoginCache.lastn;
+        }
         //Diseño de los botones
         public void SelectingButtons(Bunifu.Framework.UI.BunifuFlatButton sender)
         {
@@ -41,6 +46,7 @@ namespace CostaDulce
             btnInventario.Textcolor = Color.White;
             btnPuntoDeVenta.Textcolor = Color.White;
             btnExit.Textcolor = Color.White;
+            btnPerfil.Textcolor = Color.White;
 
             sender.selected = true;
 
@@ -69,6 +75,7 @@ namespace CostaDulce
            // openFormsOnWrapper(new FrmInventario());
             lblHead.Text = "Inventario";
             lblHead.Dock = DockStyle.Top;
+
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -85,7 +92,6 @@ namespace CostaDulce
         private void btnExit_Click(object sender, EventArgs e)
         {
             //Diseño de botón
-            SelectingButtons((Bunifu.Framework.UI.BunifuFlatButton)sender);
             //---
             this.Close();
 
@@ -105,6 +111,26 @@ namespace CostaDulce
         }
 
         private void Header_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            SelectingButtons((Bunifu.Framework.UI.BunifuFlatButton)sender);
+
+            //---
+            openFormsOnWrapper(new frmDatosUsuario());
+            lblHead.Text = "Usuarios y contraseñas";
+            lblHead.Dock = DockStyle.None;
+        }
+
+        private void Sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblnombreusuario_Click(object sender, EventArgs e)
         {
 
         }

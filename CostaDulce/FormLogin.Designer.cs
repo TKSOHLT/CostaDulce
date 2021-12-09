@@ -53,6 +53,7 @@ namespace CostaDulce
             this.txtUser.Size = new System.Drawing.Size(323, 22);
             this.txtUser.TabIndex = 1;
             this.txtUser.Text = "Ingrese usuario";
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // txtPassword
             // 
@@ -66,7 +67,7 @@ namespace CostaDulce
             this.txtPassword.Size = new System.Drawing.Size(323, 22);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.Text = "Ingrese contraseña";
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged_1);
             // 
             // btnLogin
             // 
@@ -117,7 +118,7 @@ namespace CostaDulce
             // 
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Product Sans", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.Maroon;
+            this.lblError.ForeColor = System.Drawing.Color.Crimson;
             this.lblError.Image = ((System.Drawing.Image)(resources.GetObject("lblError.Image")));
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblError.Location = new System.Drawing.Point(367, 265);

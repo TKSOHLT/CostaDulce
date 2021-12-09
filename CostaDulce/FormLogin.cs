@@ -24,7 +24,7 @@ namespace CostaDulce
             IntPtr ptr = NativeMethods.CreateRoundRectRgn(15, 15, this.Width, this.Height, 40, 40);
             this.Region = System.Drawing.Region.FromHrgn(ptr);
             NativeMethods.DeleteObject(ptr);
-            txtPassword.GotFocus += textBox1_GotFocus;
+            //txtPassword.GotFocus += textBox1_GotFocus;
             txtPassword.MouseUp+= textBox1_MouseUp;
             txtPassword.Leave += textBox1_Leave;
             txtUser.GotFocus += textBox2_GotFocus;
@@ -45,6 +45,7 @@ namespace CostaDulce
                     {
                         frmMenu menu = new frmMenu();
                         menu.Show();
+                        menu.FormClosed += cerrarSesion;//sobrecarga de dos eventos
                         this.Hide();
                     }
                     else { msError("Nombre de usuario o contraseña incorrectos.\n      Intente de nuevo...");
@@ -57,8 +58,7 @@ namespace CostaDulce
                 else msError("PORFAVOR INGRESE LA CONTRASEÑA");
             }
             else msError("PORFAVOR INGRESE EL NOMBRE DE USUARIO");
-            //logins();
-            //this.Dispose();
+            
 
         }
         private void msError(String msg)
@@ -66,42 +66,9 @@ namespace CostaDulce
             lblError.Text = "      " + msg;
             lblError.Visible = true;
         }
-        public void logins()
-        {
-            try
-            {
-                string cdl = ConfigurationManager.ConnectionStrings["cdl"].ConnectionString;
-               
-                using(SqlConnection conexion =new SqlConnection(cdl))
-                {
-                  conexion.Open();
-                  SqlCommand cmd = new SqlCommand("SELECT NombreUsuario, password FROM costaDulce.dbo.Users WHERE NombreUsuario=@vusuario AND password= @vcontrasena", conexion);
-                    
-                        cmd.Parameters.AddWithValue("vusuario", txtUser.Text);
-                        cmd.Parameters.AddWithValue("vcontrasena", txtPassword.Text);
-
-                    SqlDataReader dr = cmd.ExecuteReader();
-                        if (dr.Read())
-                        {
-                            MessageBox.Show("conectado");
-                            frmMenu menu = new frmMenu();
-
-                            menu.Show();
-                        }
-                        else
-                            MessageBox.Show("FATAL: NO CONECTADO");
-                    
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
+        
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            this.ControlBox = false;
             /*
             PrivateFontCollection pfc = new PrivateFontCollection();
             pfc.AddFontFile(@"C:\ProductSans-Regular.ttf");
@@ -136,11 +103,6 @@ namespace CostaDulce
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = true;
         }
         void textBox1_Leave(object sender, EventArgs e) { 
             alreadyFocused = false;
@@ -186,6 +148,25 @@ namespace CostaDulce
         {
             var recoverPassword = new OlvideContraseña();
             recoverPassword.ShowDialog();
+        }
+
+        private void txtPassword_TextChanged_1(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        //LOG OUT
+        private void cerrarSesion(Object sender, FormClosedEventArgs e)
+        {
+            txtPassword.Clear();
+            txtUser.Clear();
+            lblError.Visible = false;
+            this.Show();
+            txtUser.Focus();
         }
     }
 }

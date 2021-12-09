@@ -29,3 +29,4 @@ C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.csproj.Copy
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.exe
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.pdb
 C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.OlvideContraseña.resources
+C:\Users\Gustavo\Proyecto\CostaDulce\CostaDulce\obj\Debug\CostaDulce.frmDatosUsuario.resources

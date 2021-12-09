@@ -8,6 +8,26 @@ namespace CostaDulce
 {
     class UserData:ConnectionToSql
     {
+
+        public void editarPerfil(int id, string username, string pass, string nom, string ape, string mail) 
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = 
+                        "UPDATE Users SET NombreUsuario=@username, Password=@pass, Nombre=@name, Apellidos=@lastN, Correo=@mail, UserID=@usrid";
+                    command.Parameters.AddWithValue("@username", username); command.Parameters.AddWithValue("@pass", pass);
+                    command.Parameters.AddWithValue("@name", nom); command.Parameters.AddWithValue("@lastN", ape);
+                    command.Parameters.AddWithValue("@mail", mail); command.Parameters.AddWithValue("@usrid", id);
+                    command.CommandType = System.Data.CommandType.Text;
+                    command.ExecuteNonQuery();
+
+                }
+            }
+        }
         public bool Login(string user, string pass)
         {
             using (var connection = GetConnection())
@@ -24,6 +44,14 @@ namespace CostaDulce
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
+                        while (reader.Read())
+                        {
+                            Cache.UserLoginCache.iduser = reader.GetInt32(0);
+                            Cache.UserLoginCache.name = reader.GetString(3);
+                            Cache.UserLoginCache.lastn = reader.GetString(4);
+                            Cache.UserLoginCache.mail = reader.GetString(5);
+
+                        }
                         return true;
                     }
                     else return false;
