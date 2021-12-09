@@ -38,7 +38,7 @@ namespace CostaDulce
             objent.Direccion = txtDireccion.Text;
             objent.Telefono = Convert.ToInt32(txtTelefono.Text);
             objent.accion = accion;
-            String men = objneg.N_mantenimiento_Producto(objent);
+            String men = objneg.N_mantenimiento_Proveedor(objent);
             MessageBox.Show(men, "mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }

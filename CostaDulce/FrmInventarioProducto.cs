@@ -32,6 +32,7 @@ namespace CostaDulce
             objent.PrecioCompra = Convert.ToInt32(txtPrecioCompra.Text);
             objent.PrecioVenta = Convert.ToInt32(txtPrecioVenta.Text);
             objent.CantidadUnidades = Convert.ToInt32(txtCantidad.Text);
+            objent.Tipo = txtTipo.Text;
             objent.accion = accion;
             String men = objneg.N_mantenimiento_Producto(objent);
             MessageBox.Show(men, "mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -44,6 +45,7 @@ namespace CostaDulce
             txtPrecioVenta.Text = "";
             txtCantidad.Text = "";
             txtBuscar.Text = "";
+            txtTipo.Text = "";
             ProductosBasedeDatos.DataSource = objneg.N_listar_Productos();
         }
 
@@ -70,8 +72,7 @@ namespace CostaDulce
         {
             if (txtID_Producto.Text != "")
             {
-                if (MessageBox.Show("¿Deseas MODIFICAR el producto " + txtNombre_Producto + "?", "Mensaje",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("¿Deseas MODIFICAR el producto " + txtNombre_Producto + "?", "Mensaje",MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
                 {
                     mantenimiento("2");
                     limpiar();
@@ -116,7 +117,7 @@ namespace CostaDulce
             txtPrecioCompra.Text = ProductosBasedeDatos[2, fila].Value.ToString();
             txtPrecioVenta.Text = ProductosBasedeDatos[3, fila].Value.ToString();
             txtCantidad.Text = ProductosBasedeDatos[4, fila].Value.ToString();
-
+            txtTipo.Text = ProductosBasedeDatos[4, fila].Value.ToString();
         }
     }
 }

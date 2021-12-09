@@ -249,6 +249,7 @@ namespace CostaDulce
             this.txtID_Empleado.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtID_Empleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID_Empleado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID_Empleado.Enabled = false;
             this.txtID_Empleado.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtID_Empleado.Location = new System.Drawing.Point(161, 44);
             this.txtID_Empleado.Name = "txtID_Empleado";
