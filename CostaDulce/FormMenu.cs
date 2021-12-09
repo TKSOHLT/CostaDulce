@@ -93,7 +93,7 @@ namespace CostaDulce
         {
             //Diseño de botón
             //---
-            this.Close();
+            Application.Exit();
 
         }
 

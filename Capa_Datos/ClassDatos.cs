@@ -13,7 +13,7 @@ namespace Capa_Datos
 {
     public class ClassDatos
     {
-        SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
+        SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cdl"].ConnectionString);
         public DataTable D_Listar_Productos()
         {
             SqlCommand cmd = new SqlCommand("listar_Productos", cn);
@@ -39,11 +39,11 @@ namespace Capa_Datos
             SqlCommand cmd = new SqlCommand("mantenimiento_Producto", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@ID_Producto", obje.ID_Producto);
-            cmd.Parameters.AddWithValue("@Nombre", obje.Nombre_Producto);
+            cmd.Parameters.AddWithValue("@Nombre_Producto", obje.Nombre_Producto);
             cmd.Parameters.AddWithValue("@PrecioCompra", obje.PrecioCompra);
             cmd.Parameters.AddWithValue("@PrecioVenta", obje.PrecioVenta);
             cmd.Parameters.AddWithValue("@CantidadUnidades", obje.CantidadUnidades);
-            cmd.Parameters.Add("@action", SqlDbType.VarChar, 50).Value = obje.accion;
+            cmd.Parameters.Add("@accion", SqlDbType.VarChar, 50).Value = obje.accion;
             cmd.Parameters.AddWithValue("@Tipo", obje.Tipo);
             cmd.Parameters["@accion"].Direction = ParameterDirection.InputOutput;
             if (cn.State == ConnectionState.Open) cn.Close();

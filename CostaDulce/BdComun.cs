@@ -13,10 +13,10 @@ namespace CostaDulce
     {
         public SqlConnection LeerCadena()
         {
-            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["compras"].ConnectionString);
-            if (cn.State == ConnectionState.Open)
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cdl"].ConnectionString);
+            if (cn.State == ConnectionState.Closed)
             {
-                cn.Close();
+                cn.Open();
             }
             else
             {

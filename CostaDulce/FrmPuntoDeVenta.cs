@@ -14,7 +14,7 @@ namespace CostaDulce
 {
     public partial class FrmPuntoDeVenta : Form
     {
-        SqlConnection connection = new SqlConnection("server=localhost;database=Ventas;integrated security=true");
+        SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["cdl"].ConnectionString);
 
         //private Usuario usuario
         public FrmPuntoDeVenta()
