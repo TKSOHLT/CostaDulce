@@ -48,7 +48,7 @@ namespace CostaDulce
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string query = "INSERT INTO Compra (articulo, id_Ingreso, id_Proveed, id_Usuario, cantidad, fecha, precioUnit, precioTot) VALUES (@articulo, @id_Ingreso, @id_Proveed, @id_Usuario, @cantidad, @fecha, @precioUnit, @precioTot)";
+           /* string query = "INSERT INTO Compra (articulo, id_Ingreso, id_Proveed, id_Usuario, cantidad, fecha, precioUnit, precioTot) VALUES (@articulo, @id_Ingreso, @id_Proveed, @id_Usuario, @cantidad, @fecha, @precioUnit, @precioTot)";
             cn.LeerCadena();
             SqlCommand comando = new SqlCommand(query, cn.LeerCadena());
             comando.Parameters.AddWithValue("@articulo", txtarticulo.Text);
@@ -72,7 +72,7 @@ namespace CostaDulce
             }
             MessageBox.Show("Se han ingresado correctamente los productos");
 
-            limpiar();
+            limpiar();*/
         }
 
         void limpiar()
@@ -126,6 +126,43 @@ namespace CostaDulce
         }
 
         private void txtprecioUnit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAñadirCompra_Click(object sender, EventArgs e)
+        {
+
+
+            string query = "INSERT INTO Compra (articulo, id_Ingreso, id_Proveed, id_Usuario, cantidad, fecha, precioUnit, precioTot) VALUES (@articulo, @id_Ingreso, @id_Proveed, @id_Usuario, @cantidad, @fecha, @precioUnit, @precioTot)";
+            cn.LeerCadena();
+            SqlCommand comando = new SqlCommand(query, cn.LeerCadena());
+            comando.Parameters.AddWithValue("@articulo", txtarticulo.Text);
+            comando.Parameters.AddWithValue("@id_Ingreso", txtidingreso.Text);
+
+            comando.Parameters.AddWithValue("@id_Proveed", txtidproveed.Text);
+            comando.Parameters.AddWithValue("@id_Usuario", txtidusuario.Text);
+            comando.Parameters.AddWithValue("@cantidad", txtcantidad.Text);
+            comando.Parameters.AddWithValue("@fecha", fecha);
+            comando.Parameters.AddWithValue("@precioUnit", txtprecioUnit.Text);
+            comando.Parameters.AddWithValue("@precioTot", txtprecioTot.Text);
+
+            try
+            {
+                cn.LeerCadena();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Problema con la BD");
+            }
+            MessageBox.Show("Se han ingresado correctamente los productos");
+
+            limpiar();
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
 
         }

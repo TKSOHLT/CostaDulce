@@ -124,5 +124,10 @@ namespace CostaDulce
             txtDireccion_E.Text = EmpledoBasedeDatos[6, fila].Value.ToString();
             txtTelefono_E.Text = EmpledoBasedeDatos[7, fila].Value.ToString();
         }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

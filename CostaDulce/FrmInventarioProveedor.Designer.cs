@@ -68,7 +68,7 @@ namespace CostaDulce
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.groupBox5.Controls.Add(this.ProveedorBasedeDatos);
             this.groupBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(36, 307);
+            this.groupBox5.Location = new System.Drawing.Point(36, 333);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1051, 273);
             this.groupBox5.TabIndex = 8;
@@ -88,6 +88,7 @@ namespace CostaDulce
             // 
             // Wrapper
             // 
+            this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(227)))));
             this.Wrapper.Controls.Add(this.groupBox3);
             this.Wrapper.Controls.Add(this.groupBox6);
             this.Wrapper.Controls.Add(this.groupBox7);
@@ -101,7 +102,7 @@ namespace CostaDulce
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox3.Controls.Add(this.Buscar);
             this.groupBox3.Controls.Add(this.txtBuscar);
             this.groupBox3.Controls.Add(this.label9);
@@ -115,12 +116,15 @@ namespace CostaDulce
             // 
             // Buscar
             // 
+            this.Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Buscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Buscar.Location = new System.Drawing.Point(629, 24);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(133, 42);
             this.Buscar.TabIndex = 0;
             this.Buscar.Text = "Buscar";
-            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.UseVisualStyleBackColor = false;
             this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // txtBuscar
@@ -145,7 +149,7 @@ namespace CostaDulce
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox6.Controls.Add(this.txtID_Producto);
             this.groupBox6.Controls.Add(this.label1);
             this.groupBox6.Controls.Add(this.txtApellidoP_P);
@@ -310,7 +314,7 @@ namespace CostaDulce
             // 
             // groupBox7
             // 
-            this.groupBox7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox7.Controls.Add(this.Agregar);
             this.groupBox7.Controls.Add(this.Modificar);
             this.groupBox7.Controls.Add(this.Eliminar);
@@ -324,32 +328,41 @@ namespace CostaDulce
             // 
             // Agregar
             // 
+            this.Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Agregar.Location = new System.Drawing.Point(22, 34);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(133, 42);
             this.Agregar.TabIndex = 4;
             this.Agregar.Text = "Agregar";
-            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.UseVisualStyleBackColor = false;
             this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // Modificar
             // 
+            this.Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Modificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Modificar.Location = new System.Drawing.Point(22, 81);
             this.Modificar.Name = "Modificar";
             this.Modificar.Size = new System.Drawing.Size(133, 42);
             this.Modificar.TabIndex = 3;
             this.Modificar.Text = "Modificar";
-            this.Modificar.UseVisualStyleBackColor = true;
+            this.Modificar.UseVisualStyleBackColor = false;
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
             // 
             // Eliminar
             // 
+            this.Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Eliminar.Location = new System.Drawing.Point(22, 129);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(133, 42);
             this.Eliminar.TabIndex = 1;
             this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.UseVisualStyleBackColor = false;
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // FrmInventarioProveedor

@@ -52,6 +52,7 @@ namespace CostaDulce
             // 
             // Wrapper
             // 
+            this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(227)))));
             this.Wrapper.Controls.Add(this.groupBox2);
             this.Wrapper.Controls.Add(this.groupBox1);
             this.Wrapper.Controls.Add(this.groupBox5);
@@ -65,7 +66,7 @@ namespace CostaDulce
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(143)))), ((int)(((byte)(177)))));
             this.groupBox2.Controls.Add(this.Productos);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(50, 72);
@@ -78,7 +79,7 @@ namespace CostaDulce
             // Productos
             // 
             this.Productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Productos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.Productos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Productos.Location = new System.Drawing.Point(6, 25);
             this.Productos.Name = "Productos";
@@ -87,7 +88,7 @@ namespace CostaDulce
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(143)))), ((int)(((byte)(177)))));
             this.groupBox1.Controls.Add(this.Empleados);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(50, 234);
@@ -100,7 +101,7 @@ namespace CostaDulce
             // Empleados
             // 
             this.Empleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Empleados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.Empleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.Empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Empleados.Location = new System.Drawing.Point(6, 25);
             this.Empleados.Name = "Empleados";
@@ -109,7 +110,7 @@ namespace CostaDulce
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(143)))), ((int)(((byte)(177)))));
             this.groupBox5.Controls.Add(this.Proveedor);
             this.groupBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(50, 405);
@@ -122,7 +123,7 @@ namespace CostaDulce
             // Proveedor
             // 
             this.Proveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Proveedor.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.Proveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.Proveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Proveedor.Location = new System.Drawing.Point(6, 27);
             this.Proveedor.Name = "Proveedor";
@@ -138,28 +139,31 @@ namespace CostaDulce
             this.ProveedorMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1224, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1224, 31);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // InventarioMenu
             // 
+            this.InventarioMenu.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InventarioMenu.Name = "InventarioMenu";
-            this.InventarioMenu.Size = new System.Drawing.Size(129, 31);
+            this.InventarioMenu.Size = new System.Drawing.Size(114, 27);
             this.InventarioMenu.Text = "Inventario";
             this.InventarioMenu.Click += new System.EventHandler(this.InventarioMenu_Click);
             // 
             // EmpleadosMenu
             // 
+            this.EmpleadosMenu.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmpleadosMenu.Name = "EmpleadosMenu";
-            this.EmpleadosMenu.Size = new System.Drawing.Size(140, 31);
+            this.EmpleadosMenu.Size = new System.Drawing.Size(123, 27);
             this.EmpleadosMenu.Text = "Empleados";
             this.EmpleadosMenu.Click += new System.EventHandler(this.EmpleadosMenu_Click);
             // 
             // ProveedorMenu
             // 
+            this.ProveedorMenu.Font = new System.Drawing.Font("Product Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProveedorMenu.Name = "ProveedorMenu";
-            this.ProveedorMenu.Size = new System.Drawing.Size(155, 31);
+            this.ProveedorMenu.Size = new System.Drawing.Size(137, 27);
             this.ProveedorMenu.Text = "Proveedores";
             this.ProveedorMenu.Click += new System.EventHandler(this.ProveedorMenu_Click);
             // 

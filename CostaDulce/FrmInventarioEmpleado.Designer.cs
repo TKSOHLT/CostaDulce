@@ -67,6 +67,7 @@ namespace CostaDulce
             // 
             // Wrapper
             // 
+            this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(227)))));
             this.Wrapper.Controls.Add(this.groupBox4);
             this.Wrapper.Controls.Add(this.groupBox3);
             this.Wrapper.Controls.Add(this.groupBox2);
@@ -80,26 +81,30 @@ namespace CostaDulce
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.txtBuscar);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(36, 209);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(853, 79);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "-BUSQUEDA-";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(628, 28);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(705, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 42);
             this.button1.TabIndex = 0;
             this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtBuscar
@@ -110,7 +115,7 @@ namespace CostaDulce
             this.txtBuscar.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtBuscar.Location = new System.Drawing.Point(107, 38);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(423, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(423, 20);
             this.txtBuscar.TabIndex = 8;
             // 
             // label8
@@ -118,13 +123,13 @@ namespace CostaDulce
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(18, 38);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 22);
+            this.label8.Size = new System.Drawing.Size(78, 19);
             this.label8.TabIndex = 6;
             this.label8.Text = "Nombre:";
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox3.Controls.Add(this.txtTelefono_E);
             this.groupBox3.Controls.Add(this.txtDireccion_E);
             this.groupBox3.Controls.Add(this.txtSalario_E);
@@ -141,7 +146,7 @@ namespace CostaDulce
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(36, 33);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(853, 170);
@@ -157,7 +162,7 @@ namespace CostaDulce
             this.txtTelefono_E.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtTelefono_E.Location = new System.Drawing.Point(443, 131);
             this.txtTelefono_E.Name = "txtTelefono_E";
-            this.txtTelefono_E.Size = new System.Drawing.Size(190, 19);
+            this.txtTelefono_E.Size = new System.Drawing.Size(190, 20);
             this.txtTelefono_E.TabIndex = 17;
             // 
             // txtDireccion_E
@@ -168,7 +173,7 @@ namespace CostaDulce
             this.txtDireccion_E.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtDireccion_E.Location = new System.Drawing.Point(443, 101);
             this.txtDireccion_E.Name = "txtDireccion_E";
-            this.txtDireccion_E.Size = new System.Drawing.Size(190, 19);
+            this.txtDireccion_E.Size = new System.Drawing.Size(190, 20);
             this.txtDireccion_E.TabIndex = 16;
             // 
             // txtSalario_E
@@ -179,7 +184,7 @@ namespace CostaDulce
             this.txtSalario_E.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtSalario_E.Location = new System.Drawing.Point(443, 69);
             this.txtSalario_E.Name = "txtSalario_E";
-            this.txtSalario_E.Size = new System.Drawing.Size(70, 19);
+            this.txtSalario_E.Size = new System.Drawing.Size(70, 20);
             this.txtSalario_E.TabIndex = 15;
             // 
             // label10
@@ -187,7 +192,7 @@ namespace CostaDulce
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(356, 44);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 19);
+            this.label10.Size = new System.Drawing.Size(53, 19);
             this.label10.TabIndex = 14;
             this.label10.Text = "Edad:";
             // 
@@ -199,7 +204,7 @@ namespace CostaDulce
             this.txtApellidoM_E.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtApellidoM_E.Location = new System.Drawing.Point(161, 131);
             this.txtApellidoM_E.Name = "txtApellidoM_E";
-            this.txtApellidoM_E.Size = new System.Drawing.Size(174, 19);
+            this.txtApellidoM_E.Size = new System.Drawing.Size(174, 20);
             this.txtApellidoM_E.TabIndex = 13;
             // 
             // label9
@@ -207,7 +212,7 @@ namespace CostaDulce
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(18, 131);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 19);
+            this.label9.Size = new System.Drawing.Size(156, 19);
             this.label9.TabIndex = 12;
             this.label9.Text = "Apellido Materno: ";
             // 
@@ -219,7 +224,7 @@ namespace CostaDulce
             this.txtApellidoP_E.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtApellidoP_E.Location = new System.Drawing.Point(161, 101);
             this.txtApellidoP_E.Name = "txtApellidoP_E";
-            this.txtApellidoP_E.Size = new System.Drawing.Size(174, 19);
+            this.txtApellidoP_E.Size = new System.Drawing.Size(174, 20);
             this.txtApellidoP_E.TabIndex = 10;
             // 
             // txtEdad_E
@@ -230,7 +235,7 @@ namespace CostaDulce
             this.txtEdad_E.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEdad_E.Location = new System.Drawing.Point(443, 41);
             this.txtEdad_E.Name = "txtEdad_E";
-            this.txtEdad_E.Size = new System.Drawing.Size(70, 19);
+            this.txtEdad_E.Size = new System.Drawing.Size(70, 20);
             this.txtEdad_E.TabIndex = 9;
             // 
             // txtNombre
@@ -241,7 +246,7 @@ namespace CostaDulce
             this.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNombre.Location = new System.Drawing.Point(161, 69);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(174, 19);
+            this.txtNombre.Size = new System.Drawing.Size(174, 20);
             this.txtNombre.TabIndex = 7;
             // 
             // txtID_Empleado
@@ -252,7 +257,7 @@ namespace CostaDulce
             this.txtID_Empleado.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtID_Empleado.Location = new System.Drawing.Point(161, 44);
             this.txtID_Empleado.Name = "txtID_Empleado";
-            this.txtID_Empleado.Size = new System.Drawing.Size(61, 19);
+            this.txtID_Empleado.Size = new System.Drawing.Size(61, 20);
             this.txtID_Empleado.TabIndex = 6;
             // 
             // label6
@@ -260,7 +265,7 @@ namespace CostaDulce
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(18, 69);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 19);
+            this.label6.Size = new System.Drawing.Size(78, 19);
             this.label6.TabIndex = 5;
             this.label6.Text = "Nombre:";
             // 
@@ -269,7 +274,7 @@ namespace CostaDulce
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(18, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 19);
+            this.label5.Size = new System.Drawing.Size(152, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "Apellido Paterno: ";
             // 
@@ -287,7 +292,7 @@ namespace CostaDulce
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(356, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 19);
+            this.label3.Size = new System.Drawing.Size(84, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefono:";
             // 
@@ -296,7 +301,7 @@ namespace CostaDulce
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(356, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 19);
+            this.label2.Size = new System.Drawing.Size(91, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Direccion:";
             // 
@@ -305,13 +310,13 @@ namespace CostaDulce
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 19);
+            this.label1.Size = new System.Drawing.Size(36, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID :";
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox2.Controls.Add(this.Agregar);
             this.groupBox2.Controls.Add(this.Modificar);
             this.groupBox2.Controls.Add(this.Eliminar);
@@ -325,40 +330,50 @@ namespace CostaDulce
             // 
             // Agregar
             // 
+            this.Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Agregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Agregar.Location = new System.Drawing.Point(22, 33);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(133, 42);
             this.Agregar.TabIndex = 4;
             this.Agregar.Text = "Agregar";
-            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.UseVisualStyleBackColor = false;
             this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
             // 
             // Modificar
             // 
+            this.Modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Modificar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Modificar.Location = new System.Drawing.Point(22, 81);
             this.Modificar.Name = "Modificar";
             this.Modificar.Size = new System.Drawing.Size(133, 42);
             this.Modificar.TabIndex = 3;
             this.Modificar.Text = "Modificar";
-            this.Modificar.UseVisualStyleBackColor = true;
+            this.Modificar.UseVisualStyleBackColor = false;
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
             // 
             // Eliminar
             // 
+            this.Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eliminar.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Eliminar.Location = new System.Drawing.Point(22, 129);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(133, 42);
             this.Eliminar.TabIndex = 1;
             this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.UseVisualStyleBackColor = false;
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(143)))), ((int)(((byte)(177)))));
             this.groupBox1.Controls.Add(this.EmpledoBasedeDatos);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(36, 307);
+            this.groupBox1.Location = new System.Drawing.Point(36, 334);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1051, 280);
             this.groupBox1.TabIndex = 8;

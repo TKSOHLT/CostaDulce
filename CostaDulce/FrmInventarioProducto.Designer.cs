@@ -63,6 +63,7 @@ namespace CostaDulce
             // 
             // Wrapper
             // 
+            this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(227)))));
             this.Wrapper.Controls.Add(this.groupBox4);
             this.Wrapper.Controls.Add(this.groupBox3);
             this.Wrapper.Controls.Add(this.groupBox2);
@@ -76,7 +77,7 @@ namespace CostaDulce
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.txtBuscar);
             this.groupBox4.Controls.Add(this.label8);
@@ -120,7 +121,7 @@ namespace CostaDulce
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox3.Controls.Add(this.txtPrecioVenta);
             this.groupBox3.Controls.Add(this.txtCantidad);
             this.groupBox3.Controls.Add(this.txtTipo);
@@ -264,7 +265,7 @@ namespace CostaDulce
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
             this.groupBox2.Controls.Add(this.Agregar);
             this.groupBox2.Controls.Add(this.Modificar);
             this.groupBox2.Controls.Add(this.Eliminar);

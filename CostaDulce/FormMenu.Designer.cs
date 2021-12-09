@@ -33,23 +33,23 @@ namespace CostaDulce
             this.Header = new System.Windows.Forms.Panel();
             this.lblHead = new System.Windows.Forms.Label();
             this.Wrapper = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblgreeting = new System.Windows.Forms.Label();
             this.lblnombreusuario = new System.Windows.Forms.Label();
-            this.Sidebar = new System.Windows.Forms.Panel();
+            this.lblgreeting = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Sidebar = new System.Windows.Forms.Panel();
             this.btnAcerca = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPerfil = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPuntoDeVenta = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCompras = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnInventario = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.Header.SuspendLayout();
             this.Wrapper.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.Sidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Header
@@ -95,6 +95,40 @@ namespace CostaDulce
             this.Wrapper.TabIndex = 2;
             this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.Header_Paint);
             // 
+            // lblnombreusuario
+            // 
+            this.lblnombreusuario.AutoSize = true;
+            this.lblnombreusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.lblnombreusuario.Font = new System.Drawing.Font("Product Sans", 35.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreusuario.Location = new System.Drawing.Point(78, 217);
+            this.lblnombreusuario.Name = "lblnombreusuario";
+            this.lblnombreusuario.Size = new System.Drawing.Size(319, 57);
+            this.lblnombreusuario.TabIndex = 3;
+            this.lblnombreusuario.Text = "Usuario Nuevo";
+            this.lblnombreusuario.Click += new System.EventHandler(this.lblnombreusuario_Click);
+            // 
+            // lblgreeting
+            // 
+            this.lblgreeting.AutoSize = true;
+            this.lblgreeting.Font = new System.Drawing.Font("Product Sans", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblgreeting.Location = new System.Drawing.Point(63, 59);
+            this.lblgreeting.Name = "lblgreeting";
+            this.lblgreeting.Size = new System.Drawing.Size(377, 116);
+            this.lblgreeting.TabIndex = 0;
+            this.lblgreeting.Text = "Saludos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(655, 99);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(484, 495);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
@@ -104,27 +138,15 @@ namespace CostaDulce
             this.panel1.Size = new System.Drawing.Size(200, 101);
             this.panel1.TabIndex = 0;
             // 
-            // lblgreeting
+            // label1
             // 
-            this.lblgreeting.AutoSize = true;
-            this.lblgreeting.Font = new System.Drawing.Font("Product Sans", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblgreeting.Location = new System.Drawing.Point(63, 59);
-            this.lblgreeting.Name = "lblgreeting";
-            this.lblgreeting.Size = new System.Drawing.Size(377, 116);
-            this.lblgreeting.TabIndex = 0;
-            this.lblgreeting.Text = "Saludos";
-            // 
-            // lblnombreusuario
-            // 
-            this.lblnombreusuario.AutoSize = true;
-            this.lblnombreusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
-            this.lblnombreusuario.Font = new System.Drawing.Font("Product Sans", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombreusuario.Location = new System.Drawing.Point(70, 220);
-            this.lblnombreusuario.Name = "lblnombreusuario";
-            this.lblnombreusuario.Size = new System.Drawing.Size(362, 64);
-            this.lblnombreusuario.TabIndex = 3;
-            this.lblnombreusuario.Text = "Usuario Nuevo";
-            this.lblnombreusuario.Click += new System.EventHandler(this.lblnombreusuario_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Product Sans", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(49, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 35);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "MENÚ";
             // 
             // Sidebar
             // 
@@ -142,17 +164,6 @@ namespace CostaDulce
             this.Sidebar.Size = new System.Drawing.Size(200, 801);
             this.Sidebar.TabIndex = 0;
             this.Sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.Sidebar_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(655, 99);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(484, 495);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnAcerca
             // 
@@ -375,16 +386,6 @@ namespace CostaDulce
             this.btnInventario.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Product Sans", 21.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 35);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "MENÚ";
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,10 +409,10 @@ namespace CostaDulce
             this.Header.PerformLayout();
             this.Wrapper.ResumeLayout(false);
             this.Wrapper.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Sidebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
