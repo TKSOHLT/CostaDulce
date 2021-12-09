@@ -25,7 +25,7 @@ namespace CostaDulce
         ClassNegocio objneg = new ClassNegocio();
         public FrmInventarioProveedor()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         void mantenimiento(String accion)
@@ -38,7 +38,7 @@ namespace CostaDulce
             objent.Direccion = txtDireccion.Text;
             objent.Telefono = Convert.ToInt32(txtTelefono.Text);
             objent.accion = accion;
-            String men = objneg.N_mantenimiento_Producto(objent);
+            String men = objneg.N_mantenimiento_Proveedor(objent);
             MessageBox.Show(men, "mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
@@ -50,7 +50,7 @@ namespace CostaDulce
             txtApellidoM_P.Text = "";
             txtID_Producto.Text = "";
             txtDireccion.Text = "";
-            txtTelefono.Text="";
+            txtTelefono.Text = "";
             ProveedorBasedeDatos.DataSource = objneg.N_listar_Proveedor();
         }
         private void Wrapper_Paint(object sender, PaintEventArgs e)
@@ -86,7 +86,7 @@ namespace CostaDulce
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
-            if(txtID.Text != "")
+            if (txtID.Text != "")
             {
                 if (MessageBox.Show("¿Deseas ELIMINAR el Empleado " + txtNombre + "?", "Mensaje",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)

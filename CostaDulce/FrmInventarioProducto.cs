@@ -26,12 +26,14 @@ namespace CostaDulce
             InitializeComponent();
         }
 
-        void mantenimiento(String accion) {
+        void mantenimiento(String accion)
+        {
             objent.ID_Producto = txtID_Producto.Text;
             objent.Nombre_Producto = txtNombre_Producto.Text;
             objent.PrecioCompra = Convert.ToInt32(txtPrecioCompra.Text);
             objent.PrecioVenta = Convert.ToInt32(txtPrecioVenta.Text);
             objent.CantidadUnidades = Convert.ToInt32(txtCantidad.Text);
+            objent.Tipo = txtTipo.Text;
             objent.accion = accion;
             String men = objneg.N_mantenimiento_Producto(objent);
             MessageBox.Show(men, "mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -39,11 +41,12 @@ namespace CostaDulce
         }
         void limpiar()
         {
-            txtNombre_Producto.Text="";
+            txtNombre_Producto.Text = "";
             txtPrecioCompra.Text = "";
             txtPrecioVenta.Text = "";
             txtCantidad.Text = "";
             txtBuscar.Text = "";
+            txtTipo.Text = "";
             ProductosBasedeDatos.DataSource = objneg.N_listar_Productos();
         }
 
@@ -56,22 +59,21 @@ namespace CostaDulce
         {
             if (txtID_Producto.Text == "")
             {
-                if (MessageBox.Show("¿Deseas REGISTRAR el producto "+txtNombre_Producto+"?","Mensaje",
+                if (MessageBox.Show("¿Deseas REGISTRAR el producto " + txtNombre_Producto + "?", "Mensaje",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
                 {
                     mantenimiento("1");
                     limpiar();
                 }
             }
-            
+
         }
 
         private void Modificar_Click(object sender, EventArgs e)
         {
             if (txtID_Producto.Text != "")
             {
-                if (MessageBox.Show("¿Deseas MODIFICAR el producto " + txtNombre_Producto + "?", "Mensaje",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("¿Deseas MODIFICAR el producto " + txtNombre_Producto + "?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
                 {
                     mantenimiento("2");
                     limpiar();
@@ -101,7 +103,7 @@ namespace CostaDulce
                 dt = objneg.N_buscar_Productos(objent);
                 ProductosBasedeDatos.DataSource = dt;
             }
-            else 
+            else
             {
                 ProductosBasedeDatos.DataSource = objneg.N_listar_Productos();
             }
@@ -116,7 +118,7 @@ namespace CostaDulce
             txtPrecioCompra.Text = ProductosBasedeDatos[2, fila].Value.ToString();
             txtPrecioVenta.Text = ProductosBasedeDatos[3, fila].Value.ToString();
             txtCantidad.Text = ProductosBasedeDatos[4, fila].Value.ToString();
-
+            txtTipo.Text = ProductosBasedeDatos[4, fila].Value.ToString();
         }
     }
 }

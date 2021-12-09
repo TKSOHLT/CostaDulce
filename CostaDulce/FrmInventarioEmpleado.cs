@@ -41,14 +41,14 @@ namespace CostaDulce
         }
         void limpiar()
         {
-            txtID_Empleado.Text="";
+            txtID_Empleado.Text = "";
             txtNombre.Text = "";
             txtApellidoP_E.Text = "";
             txtApellidoM_E.Text = "";
-            txtEdad_E.Text= "";
-            txtSalario_E.Text= "";
+            txtEdad_E.Text = "";
+            txtSalario_E.Text = "";
             txtDireccion_E.Text = "";
-            txtTelefono_E.Text= "";
+            txtTelefono_E.Text = "";
             EmpledoBasedeDatos.DataSource = objneg.N_listar_Empleados();
         }
 

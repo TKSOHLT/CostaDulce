@@ -43,8 +43,8 @@ namespace Capa_Datos
             cmd.Parameters.AddWithValue("@PrecioCompra", obje.PrecioCompra);
             cmd.Parameters.AddWithValue("@PrecioVenta", obje.PrecioVenta);
             cmd.Parameters.AddWithValue("@CantidadUnidades", obje.CantidadUnidades);
-            cmd.Parameters.Add("@accion", SqlDbType.VarChar, 50).Value = obje.accion;
             cmd.Parameters.AddWithValue("@Tipo", obje.Tipo);
+            cmd.Parameters.Add("@accion", SqlDbType.VarChar, 50).Value = obje.accion;
             cmd.Parameters["@accion"].Direction = ParameterDirection.InputOutput;
             if (cn.State == ConnectionState.Open) cn.Close();
             cn.Open();
@@ -86,8 +86,7 @@ namespace Capa_Datos
             cmd.Parameters.AddWithValue("@Salario", obje.Salario);
             cmd.Parameters.AddWithValue("@Direccion", obje.Direccion);
             cmd.Parameters.AddWithValue("@Telefono", obje.Telefono);
-            cmd.Parameters.Add("@action", SqlDbType.VarChar, 50).Value = obje.accion;
-            cmd.Parameters.AddWithValue("@Tipo", obje.Tipo);
+            cmd.Parameters.Add("@accion", SqlDbType.VarChar, 50).Value = obje.accion;
             cmd.Parameters["@accion"].Direction = ParameterDirection.InputOutput;
             if (cn.State == ConnectionState.Open) cn.Close();
             cn.Open();
@@ -128,8 +127,7 @@ namespace Capa_Datos
             cmd.Parameters.AddWithValue("@ID_Producto", obje.ID_Producto);
             cmd.Parameters.AddWithValue("@Direccion", obje.Direccion);
             cmd.Parameters.AddWithValue("@Telefono", obje.Telefono);
-            cmd.Parameters.Add("@action", SqlDbType.VarChar, 50).Value = obje.accion;
-            cmd.Parameters.AddWithValue("@Tipo", obje.Tipo);
+            cmd.Parameters.Add("@accion", SqlDbType.VarChar, 50).Value = obje.accion;
             cmd.Parameters["@accion"].Direction = ParameterDirection.InputOutput;
             if (cn.State == ConnectionState.Open) cn.Close();
             cn.Open();

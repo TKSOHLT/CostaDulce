@@ -37,7 +37,7 @@ namespace CostaDulce
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.txtNombre_Producto = new System.Windows.Forms.TextBox();
             this.txtID_Producto = new System.Windows.Forms.TextBox();
@@ -123,7 +123,7 @@ namespace CostaDulce
             this.groupBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox3.Controls.Add(this.txtPrecioVenta);
             this.groupBox3.Controls.Add(this.txtCantidad);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txtTipo);
             this.groupBox3.Controls.Add(this.txtPrecioCompra);
             this.groupBox3.Controls.Add(this.txtNombre_Producto);
             this.groupBox3.Controls.Add(this.txtID_Producto);
@@ -163,16 +163,16 @@ namespace CostaDulce
             this.txtCantidad.Size = new System.Drawing.Size(70, 19);
             this.txtCantidad.TabIndex = 10;
             // 
-            // textBox4
+            // txtTipo
             // 
-            this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox4.Location = new System.Drawing.Point(670, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 19);
-            this.textBox4.TabIndex = 9;
+            this.txtTipo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTipo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtTipo.Location = new System.Drawing.Point(670, 91);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(70, 19);
+            this.txtTipo.TabIndex = 9;
             // 
             // txtPrecioCompra
             // 
@@ -363,7 +363,7 @@ namespace CostaDulce
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtPrecioCompra;
         private System.Windows.Forms.TextBox txtNombre_Producto;
         private System.Windows.Forms.Label label6;
